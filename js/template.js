@@ -26,8 +26,8 @@ function HeroTemplate() {
       <div class="hero-content">
 
         <div class="hero-image">
-          <img class="shadow-green" src="assets/images/Green shadow Foto.png" alt="glow-green">
           <img class="shadow-purple" src="assets/images/Purple shadow Foto.png" alt="glow-purple">
+          <img class="shadow-green" src="assets/images/Green shadow Foto.png" alt="glow-green">
           <img class="profile-img" src="assets/images/hero character photo.png" alt="Profile">
         </div>
 
@@ -47,6 +47,8 @@ function HeroTemplate() {
         </div>
 
       </div>
+
+      <img class="vector" src="assets/images/Vector (1).png">
 
       <div class="scroll-indicator">
         <span>Scroll down</span>

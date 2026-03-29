@@ -67,11 +67,8 @@
 .hero-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 100px;
-  margin-top: 80px;
+  margin-top: 108px;
 }
-
 
 .hero-image {
   position: relative;
@@ -79,12 +76,11 @@
   height: 705px;
 }
 
-/* Profilbild */
 .profile-img {
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
+  width: 646px;
+  height: 705px;
   object-fit: cover;
   z-index: 2;
 }
@@ -94,24 +90,30 @@
   width: 521px;
   height: 378px;
   top: 200px;
-  left: 0;
+  left: 230px;
   z-index: 0;
+  transform: rotate(45deg);
 }
 
 .shadow-purple {
   position: absolute;
   width: 407px;
   height: 608px;
-  top: 40px;
-  left: 230px;
+  top: 100px;
+  left: 0;
   z-index: 1;
 }
 
-
+.vector {
+    position: absolute;
+    top: 461px;
+    z-index: 2;
+}
 
 
 .hero-text {
-    margin-top: 10px;
+    margin-bottom: 50px;
+    transform: translateX(-60px);
 }
 .hero-text .intro {
   font-size: 64px;
@@ -149,7 +151,7 @@
 .scroll-indicator {
   position: absolute;
   bottom: 30px;
-  left: 80px;
+  right: 60px;
   font-size: 14px;
   color: #aaa;
 }
@@ -239,13 +241,12 @@
 .hero-title-group {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 20px;
 }
 
 .hero-side-text {
   display: flex;
   align-items: center;
-  gap: 24px;
 }
 
 .hero-side-text span {
