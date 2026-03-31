@@ -176,11 +176,6 @@
 
 /* -------------------About section------------------*/
 
-#about-section {
-    z-index: 3;
-    position: relative;
-}
-
 .about-topbar {
   display: flex;
   align-items: center;
@@ -328,4 +323,72 @@
   line-height: 1;
   color: #8a3ffc;
   letter-spacing: 2px;
+}
+
+/* -------------------Skills section------------------*/
+
+
+.skills-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 170px;
+}
+.icon{
+    height: 84px;
+    width: 84px;
+}
+
+.icon:hover {
+    transform: scale(1.5);
+}
+
+.left-container {
+    margin-top: 50px;
+    margin-left: 110px;
+    width: 40%;
+    z-index: 6;
+}
+
+.right-container {
+    margin-right: 100px;
+}
+
+.skills-box {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px 12px;
+    justify-items: start;
+}
+
+.skills-txt h1 {
+    font-size: 90px;
+}
+
+.skills-txt {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.btn {
+    margin-top: 20px;
+    font-size: 23px;
+    color: white;
+    padding: 15px 20px 15px 20px;
+    background-color: #70E61C;
+    border-radius: 10px;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #8a3ffc;
+    transform: scale(1.1);
+}
+
+.green-shadow-2 {
+    position: absolute;
+    top: 140px;
+    left: 0;
+    z-index: 1;
 }

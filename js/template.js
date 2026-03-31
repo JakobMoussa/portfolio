@@ -139,3 +139,43 @@ function renderAboutTemplate() {
     </section>
   `;
 }
+
+function renderSkillsTemplate() {
+  return `
+
+  <section class="skills-section">
+      
+      <div class="left-container">
+        <div class="skills-box">
+            <img class="icon" src="assets/images/icons/icon-1.svg">
+            <img class="icon" src="assets/images/icons/icon-2.svg">
+            <img class="icon" src="assets/images/icons/icon-3.svg">
+            <img class="icon" src="assets/images/icons/icon-4.svg">
+            <img class="icon" src="assets/images/icons/icon-5.svg">
+            <img class="icon" src="assets/images/icons/icon-6.svg">
+            <img class="icon" src="assets/images/icons/icon-7.svg">
+            <img class="icon" src="assets/images/icons/icon-8.svg">
+            <img class="icon" src="assets/images/icons/icon-9.svg">
+            <img class="icon" src="assets/images/icons/icon-10.svg">
+            <img class="icon" src="assets/images/icons/icon-11.svg">
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div class="skills-txt">
+
+          <h1>My Skills</h1>
+          <p>Show that you hae used a variety of front-end technologies in your projects</p>
+          <p>Looking for another?<p>
+          <p>Text-Text-TextTextText-Text-Text-Text-Text-<p>
+          <button class="btn">Get in touch</button>
+        
+        </div>
+
+      </div>
+      <img  class="green-shadow-2" src="assets/images/Green shadow 2 (1).png">
+  </section>
+  
+  
+  `
+}

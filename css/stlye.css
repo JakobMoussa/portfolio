@@ -12,3 +12,13 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
 }
+
+#about-section {
+  z-index: 3;
+  position: relative;
+}
+
+#skills-section {
+  z-index: 3;
+  position: relative;
+}
