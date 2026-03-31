@@ -49,10 +49,11 @@ function HeroTemplate() {
       </div>
 
       <img class="vector" src="assets/images/Vector (1).png">
-
-      <div class="scroll-indicator">
-        <span>Scroll down</span>
+        <span class="scroll-txt">Scroll down
+        <img  class="arrow-icon" src="assets/images/icons/arrow.svg"/>
+        </span>
       </div>
+      <img class="purple-shadow-2" src="assets/images/Purple shadow 2 (1).png" />
 
     </section>
   `;
@@ -67,9 +68,9 @@ function renderAboutTemplate() {
         <div class="topbar-line"></div>
 
         <div class="social-links">
-          <a href="#"><img src="github-icon.svg" alt="GitHub"></a>
-          <a href="#"><img src="mail-icon.svg" alt="Mail"></a>
-          <a href="#"><img src="linkedin-icon.svg" alt="LinkedIn"></a>
+          <a href="#"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
+          <a href="#"><img src="assets/images/icons/Email button.svg" alt="Mail"></a>
+          <a href="#"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
         </div>
 
         <div class="email">
@@ -84,36 +85,41 @@ function renderAboutTemplate() {
         <div class="about-text">
           <h2>About me</h2>
 
-          <p>
-          Text1
+          <p class="txt">
+          Ich interessiere mich für IT und besonders für Programmierung.
+          Coding macht mir Spaß, weil ich damit Probleme lösen und eigene Ideen umsetzen kann.
+          Ich verbessere mich durch Übung, Tutorials und eigene Projekte.
           </p>
 
           <div class="about-items">
 
             <div class="about-item">
               <div class="about-icon">
-                <img src="location-icon.svg" alt="">
+                <img src="assets/images/icons/11.Location.svg" alt="">
               </div>
               <p>
-               Text 2
+               Ich bin derzeit in Deutschland ansässig und offen für Remote-Arbeit sowie einen Umzug.
               </p>
             </div>
 
             <div class="about-item">
               <div class="about-icon">
-                <img src="bulb-icon.svg" alt="">
+                <img src="assets/images/icons/12. bulb desktop.svg" alt="">
               </div>
               <p>
-               Text 3
+                  Ich bin offen für Neues und lerne gerne ständig dazu. 
+                  Neue Technologien motivieren mich, meine Fähigkeiten weiterzuentwickeln und mich kontinuierlich zu verbessern.
               </p>
             </div>
 
             <div class="about-item">
               <div class="about-icon">
-                <img src="puzzle-icon.svg" alt="">
+                <img src="assets/images/icons/13. puzzle desktop.svg" alt="">
               </div>
               <p>
-                Text 4
+                Mein Problemlösungsansatz basiert auf analytischem Denken, Kreativität und Ausdauer.
+                Ich lerne aus jeder Herausforderung und suche nach möglichst effizienten und eleganten Lösungen.
+                Dabei ist mir auch Zusammenarbeit wichtig, um unterschiedliche Perspektiven einzubeziehen.
               </p>
             </div>
 
@@ -123,9 +129,9 @@ function renderAboutTemplate() {
         <!-- Right -->
         <div class="about-image">
           <div class="image-circle">
-            <img src="" alt="Jakob">
+            <img class="profile-2" src="assets/images/profile-2.png" alt="Jakob">
           </div>
-          <div class="image-line"></div>
+          <div class="circle-line"></div>
         </div>
 
       </div>
