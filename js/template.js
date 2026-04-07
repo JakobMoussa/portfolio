@@ -139,7 +139,6 @@ function renderAboutTemplate() {
     </section>
   `;
 }
-
 function renderSkillsTemplate() {
   return `
 
@@ -157,7 +156,21 @@ function renderSkillsTemplate() {
             <img class="icon" src="assets/images/icons/icon-8.svg">
             <img class="icon" src="assets/images/icons/icon-9.svg">
             <img class="icon" src="assets/images/icons/icon-10.svg">
-            <img class="icon" src="assets/images/icons/icon-11.svg">
+            <div class="special-icon">
+            <div class="learning-card">
+              <img class="main-icon" src="assets/images/icons/icon-11.svg" alt="Learning Icon">
+              <div class="skill-bubble">
+                <p>I have a special interest in learning</p>
+
+                <div class="bubble-icons">
+                  <img src="assets/images/icons/react.svg" alt="React">
+                  <img src="assets/images/icons/vue.svg" alt="Vue">
+                </div>
+              </div>
+            </div>
+          </div>
+            
+
         </div>
       </div>
 
@@ -165,9 +178,18 @@ function renderSkillsTemplate() {
         <div class="skills-txt">
 
           <h1>My Skills</h1>
-          <p>Show that you hae used a variety of front-end technologies in your projects</p>
-          <p>Looking for another?<p>
-          <p>Text-Text-TextTextText-Text-Text-Text-Text-<p>
+          <p class="txt-1">Als Frontend-Entwickler habe ich bereits mit verschiedenen<br>Technologien 
+              wie HTML, CSS, JavaScript und<br>modernen Frameworks gearbeitet.
+          </p>
+          
+          <p class="txt-2">
+            Looking for <span>another skill?</span>
+          </p>
+
+          <p class="txt-3">Es begeistert mich, mein Wissen ständig zu erweitern 
+              und moderne Tools<br> in meinen Projekten einzusetzen.
+          </p>
+
           <button class="btn">Get in touch</button>
         
         </div>

@@ -30,11 +30,16 @@
   font-size: 23px;
   font-weight: 400;
   line-height: 1;
-  transition: color 0.2s ease;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .nav a:hover {
   color: #70e61c;
+  text-decoration-line: underline;
+  text-decoration-color: #8a3ffc;
 }
 
 .language-switch {
@@ -105,7 +110,7 @@
 }
 
 .vector {
-  max-width: 1430px;
+  max-width: 1440px;
   position: absolute;
   top: 412px;
   z-index: 2;
@@ -327,16 +332,80 @@
 
 /* -------------------Skills section------------------*/
 
-
 .skills-section {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
     margin-top: 170px;
 }
+
 .icon{
     height: 84px;
     width: 84px;
+}
+
+.learning-card {
+  position: relative;
+  display: inline-block;
+}
+
+.main-icon {
+  width: 80px;
+  cursor: pointer;
+  display: block;
+}
+
+.main-icon:hover {
+    transform: scale(1.5);
+}
+
+.skill-bubble {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  
+  width: 220px;
+  padding: 18px 16px;
+  border-radius: 24px;
+  background: #f1f1f1;
+  color: #111;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  opacity: 1;
+  visibility: hidden;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  z-index: 20;
+}
+
+.skill-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 12px;
+  border-style: solid;
+  border-color: #f1f1f1 transparent transparent transparent;
+}
+
+.learning-card:hover .skill-bubble {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.bubble-icons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.bubble-icons img {
+  width: 36px;
+  height: 36px;
 }
 
 .icon:hover {
@@ -344,46 +413,25 @@
 }
 
 .left-container {
-    margin-top: 50px;
     margin-left: 110px;
     width: 40%;
     z-index: 6;
+    display: flex;
+    align-items: stretch;
 }
 
 .right-container {
     margin-right: 100px;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: stretch;
 }
 
 .skills-box {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 16px 12px;
+    gap: 0px 35px;
     justify-items: start;
-}
-
-.skills-txt h1 {
-    font-size: 90px;
-}
-
-.skills-txt {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-}
-
-.btn {
-    margin-top: 20px;
-    font-size: 23px;
-    color: white;
-    padding: 15px 20px 15px 20px;
-    background-color: #70E61C;
-    border-radius: 10px;
-    border: none;
-}
-
-.btn:hover {
-    background-color: #8a3ffc;
-    transform: scale(1.1);
 }
 
 .green-shadow-2 {
@@ -392,3 +440,71 @@
     left: 0;
     z-index: 1;
 }
+
+.skills-txt {
+  color: white;
+  text-align: end;
+  max-width: 100%;
+  margin: 0 0 0 auto;
+}
+
+.skills-txt h1 {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0 0 40px 0;
+  position: relative;
+}
+
+.skills-txt h1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 12px);
+  right: -100px;
+  height: 3px;
+  background: #8a3ffc;
+  border-radius: 999px;
+  transform: translateY(-50%);
+}
+
+.txt-1 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 40px 0;
+}
+
+.txt-2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.txt-2 span {
+  color: #8a3ffc;
+}
+
+.txt-3 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  margin: 0 0 40px 0;
+}
+
+.btn {
+  background: #70e61c;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 18px 40px;
+  font-size: 22px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #8a3ffc;
+    transform: scale(1.1);
+} 
