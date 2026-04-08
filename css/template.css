@@ -236,6 +236,14 @@
   font-size: 16px;
 }
 
+.txt {
+    text-align: start;
+}
+
+.info-txt {
+  text-align: start;
+}
+
 .about-items {
   display: flex;
   flex-direction: column;
@@ -245,7 +253,7 @@
 .about-item {
   display: flex;
   gap: 15px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .about-image {
@@ -328,6 +336,12 @@
   line-height: 1;
   color: #8a3ffc;
   letter-spacing: 2px;
+}
+
+.bubble-txt {
+  align-items: center;
+  text-align: center;
+  margin: 0;
 }
 
 /* -------------------Skills section------------------*/
@@ -473,12 +487,14 @@
   font-weight: 400;
   line-height: 1.4;
   margin: 0 0 40px 0;
+  text-align: right;
 }
 
 .txt-2 {
   font-size: 32px;
   font-weight: 700;
   margin: 0 0 20px 0;
+  text-align: right;
 }
 
 .txt-2 span {
@@ -490,6 +506,7 @@
   font-weight: 400;
   line-height: 1.4;
   margin: 0 0 40px 0;
+  text-align: right;
 }
 
 .btn {
@@ -507,4 +524,97 @@
 .btn:hover {
     background-color: #8a3ffc;
     transform: scale(1.1);
-} 
+}
+
+/* -------------------Portfolio section------------------*/
+
+#portfolio-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  width: min(100%, 1304px);
+  max-width: 1304px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.portfolio-headline {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 24px;
+  margin-top: 120px;
+  margin-left: 0;
+  font-size: 90px;
+  color: #ffffff;
+  width: 100%;
+}
+
+.portfolio-headline::before {
+  content: "";
+  width: 90px;
+  height: 4px;
+  background: #8a3ffc;
+  border-radius: 999px;
+  justify-self: end;
+}
+
+.portfolio-headline::after {
+  content: "";
+  width: 100%;
+  min-width: 550px;
+  height: 4px;
+  background: #8a3ffc;
+  border-radius: 999px;
+  justify-self: stretch;
+}
+
+p {
+  text-align: center;
+  margin-right: 100px;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.portfolio-section p {
+  margin-right: 0;
+  max-width: 100%;
+}
+
+.portfolio-projects {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.portfolio-project {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.portfolio-project .project-media {
+  order: 1;
+  flex: 0 0 620px;
+}
+
+.portfolio-project .project-content {
+  order: 2;
+  flex: 1 1 auto;
+  max-width: 520px;
+}
+
+.portfolio-project .project-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}

@@ -97,7 +97,7 @@ function renderAboutTemplate() {
               <div class="about-icon">
                 <img src="assets/images/icons/11.Location.svg" alt="">
               </div>
-              <p>
+              <p class="info-txt">
                Ich bin derzeit in Deutschland ansässig und offen für Remote-Arbeit sowie einen Umzug.
               </p>
             </div>
@@ -106,7 +106,7 @@ function renderAboutTemplate() {
               <div class="about-icon">
                 <img src="assets/images/icons/12. bulb desktop.svg" alt="">
               </div>
-              <p>
+              <p class="info-txt">
                   Ich bin offen für Neues und lerne gerne ständig dazu. 
                   Neue Technologien motivieren mich, meine Fähigkeiten weiterzuentwickeln und mich kontinuierlich zu verbessern.
               </p>
@@ -116,7 +116,7 @@ function renderAboutTemplate() {
               <div class="about-icon">
                 <img src="assets/images/icons/13. puzzle desktop.svg" alt="">
               </div>
-              <p>
+              <p class="info-txt">
                 Mein Problemlösungsansatz basiert auf analytischem Denken, Kreativität und Ausdauer.
                 Ich lerne aus jeder Herausforderung und suche nach möglichst effizienten und eleganten Lösungen.
                 Dabei ist mir auch Zusammenarbeit wichtig, um unterschiedliche Perspektiven einzubeziehen.
@@ -160,7 +160,7 @@ function renderSkillsTemplate() {
             <div class="learning-card">
               <img class="main-icon" src="assets/images/icons/icon-11.svg" alt="Learning Icon">
               <div class="skill-bubble">
-                <p>I have a special interest in learning</p>
+                <p class="bubble-txt">I have a special interest in learning</p>
 
                 <div class="bubble-icons">
                   <img src="assets/images/icons/react.svg" alt="React">
@@ -186,8 +186,8 @@ function renderSkillsTemplate() {
             Looking for <span>another skill?</span>
           </p>
 
-          <p class="txt-3">Es begeistert mich, mein Wissen ständig zu erweitern 
-              und moderne Tools<br> in meinen Projekten einzusetzen.
+          <p class="txt-3">Es begeistert mich, mein Wissen ständig zu erweitern<br>
+              und moderne Tools in meinen Projekten einzusetzen.
           </p>
 
           <button class="btn">Get in touch</button>
@@ -198,6 +198,92 @@ function renderSkillsTemplate() {
       <img  class="green-shadow-2" src="assets/images/Green shadow 2 (1).png">
   </section>
   
-  
+  `
+}
+
+function renderPortfolioTemplate() {
+  return `
+        <section class="portfolio-section">
+          <h1 class="portfolio-headline">Portfolio</h1>
+          <p>Explore a selection of my work here - 
+          Interact with projects to see my skills in action.</p>
+
+          <div class="portfolio-projects">
+            <article class="portfolio-project">
+              <div class="project-media">
+                <img class="join-image" src="assets/images/join.png" alt="Join project preview">
+              </div>
+              <div class="project-content">
+                <h2>Join</h2>
+                <h3>Angular | TypeScript | HTML | CSS | Firebase</h3>
+                <p>Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.</p>
+                <div class="project-actions">
+                  <a href="#" class="project-btn live-btn">Live test</a>
+                  <a href="#" class="project-btn github-btn">Github</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-project reverse">
+              <div class="project-content">
+                <h2>Sharkie</h2>
+                <h3>JavaScript | HTML | CSS</h3>
+                <p>A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.</p>
+                <div class="project-actions">
+                  <a href="#" class="project-btn live-btn">Live test</a>
+                  <a href="#" class="project-btn github-btn">Github</a>
+                </div>
+              </div>
+              <div class="project-media">
+                <img src="">
+              </div>
+            </article>
+
+            <article class="portfolio-project">
+              <div class="project-media">
+                <img src="">
+              </div>
+              <div class="project-content">
+                <h2>Simple CRM</h2>
+                <h3>Angular | Firebase</h3>
+                <p>A very simple customer relationship management system working with CRUD functionality.</p>
+                <div class="project-actions">
+                  <a href="#" class="project-btn live-btn">Live test</a>
+                  <a href="#" class="project-btn github-btn">Github</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-project reverse">
+              <div class="project-content">
+                <h2>Pokedex</h2>
+                <h3>JavaScript | HTML | CSS | Api</h3>
+                <p>Based on the PokeAPI a simple library that provides and catalogues pokemon information.</p>
+                <div class="project-actions">
+                  <a href="#" class="project-btn live-btn">Live test</a>
+                  <a href="#" class="project-btn github-btn">Github</a>
+                </div>
+              </div>
+              <div class="project-media">
+                <img src="">
+              </div>
+            </article>
+
+            <article class="portfolio-project">
+              <div class="project-media">
+                <img src="">
+              </div>
+              <div class="project-content">
+                <h2>DA Bubble</h2>
+                <h3>Angular | TypeScript | Firebase</h3>
+                <p>This app is a Slack clone app. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.</p>
+                <div class="project-actions">
+                  <a href="#" class="project-btn live-btn">Live test</a>
+                  <a href="#" class="project-btn github-btn">Github</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
   `
 }
