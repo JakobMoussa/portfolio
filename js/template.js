@@ -216,10 +216,10 @@ function renderPortfolioTemplate() {
               <div class="project-content">
                 <h2>Join</h2>
                 <h3>Angular | TypeScript | HTML | CSS | Firebase</h3>
-                <p>Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.</p>
+                <p class="p-txt">Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.</p>
                 <div class="project-actions">
-                  <a href="#" class="project-btn live-btn">Live test</a>
-                  <a href="#" class="project-btn github-btn">Github</a>
+                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
+                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
                 </div>
               </div>
             </article>
@@ -228,28 +228,29 @@ function renderPortfolioTemplate() {
               <div class="project-content">
                 <h2>Sharkie</h2>
                 <h3>JavaScript | HTML | CSS</h3>
-                <p>A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.</p>
+                <p class="p-txt">A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.</p>
                 <div class="project-actions">
-                  <a href="#" class="project-btn live-btn">Live test</a>
-                  <a href="#" class="project-btn github-btn">Github</a>
+                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
+                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
                 </div>
               </div>
               <div class="project-media">
-                <img src="">
+                <img class="sharkie-image" src="assets/images/sharkie.png">
               </div>
             </article>
 
             <article class="portfolio-project">
-              <div class="project-media">
-                <img src="">
+              <img class="crm-shadow" src="assets/images/icons/Purple shadow 3.png" alt="">
+              <div class="project-media crm-media">
+                <img class="crm-photo" src="assets/images/Simple CRM photo.png">
               </div>
               <div class="project-content">
                 <h2>Simple CRM</h2>
                 <h3>Angular | Firebase</h3>
-                <p>A very simple customer relationship management system working with CRUD functionality.</p>
+                <p class="p-txt">A very simple customer relationship management system working with CRUD functionality.</p>
                 <div class="project-actions">
-                  <a href="#" class="project-btn live-btn">Live test</a>
-                  <a href="#" class="project-btn github-btn">Github</a>
+                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
+                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
                 </div>
               </div>
             </article>
@@ -258,32 +259,118 @@ function renderPortfolioTemplate() {
               <div class="project-content">
                 <h2>Pokedex</h2>
                 <h3>JavaScript | HTML | CSS | Api</h3>
-                <p>Based on the PokeAPI a simple library that provides and catalogues pokemon information.</p>
+                <p class="p-txt">Based on the PokeAPI a simple library that provides and catalogues pokemon information.</p>
                 <div class="project-actions">
-                  <a href="#" class="project-btn live-btn">Live test</a>
-                  <a href="#" class="project-btn github-btn">Github</a>
+                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
+                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
                 </div>
               </div>
               <div class="project-media">
-                <img src="">
+                <img src="assets/images/Pokédex photo.png">
               </div>
             </article>
 
             <article class="portfolio-project">
               <div class="project-media">
-                <img src="">
+                <img src="assets/images/DA Bubble.png">
               </div>
               <div class="project-content">
                 <h2>DA Bubble</h2>
                 <h3>Angular | TypeScript | Firebase</h3>
-                <p>This app is a Slack clone app. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.</p>
+                <p class="p-txt">This app is a Slack clone app. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.</p>
                 <div class="project-actions">
-                  <a href="#" class="project-btn live-btn">Live test</a>
-                  <a href="#" class="project-btn github-btn">Github</a>
+                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
+                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
                 </div>
               </div>
             </article>
           </div>
+
+          <section class="portfolio-reference">
+            <div class="testimonial-card-wrap">
+              <img class="testimonial-quote" src="assets/images/Comma.svg" alt="">
+
+              <div class="testimonial-card">
+                <p class="testimonial-text">
+                  Michael really kept the team together with his great organization and clear communication.
+                  We wouldn't have got this far without his commitment.
+                </p>
+                <div class="testimonial-footer">
+                  <span class="testimonial-line"></span>
+                  <span class="testimonial-author">V. Schuster - Team Partner</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-person-wrap">
+              <img class="testimonial-green-shadow" src="assets/images/Green shadow 2 (2).png" alt="">
+              <img class="testimonial-person" src="assets/images/profile.png" alt="Team partner portrait">
+              <span class="testimonial-person-line"></span>
+            </div>
+          </section>
+
+          <div class="testimonial-nav" aria-label="testimonial navigation">
+            <button class="nav-arrow" type="button" aria-label="previous testimonial">&larr;</button>
+            <span class="nav-dot active"></span>
+            <span class="nav-dot"></span>
+            <span class="nav-dot"></span>
+            <button class="nav-arrow" type="button" aria-label="next testimonial">&rarr;</button>
+          </div>
         </section>
+  `
+}
+
+function renderContactTemplate() {
+  return `
+<section class="contact-section">
+
+  <!-- Headline -->
+  <div class="contact-headline-container">
+    <span class="line"></span>
+    <h2 class="contact-headline">Contact</h2>
+  </div>
+
+  <!-- Content Bereich -->
+  <div class="contact-container">
+
+    <!-- Links -->
+    <div class="contact-left">
+      <h3>Got a problem to solve?</h3>
+
+      <p>
+        Encourage people to contact you and describe what role you are interested in.
+        Show that you will add value to their projects through your work.
+      </p>
+
+      <p>
+        Need a Frontend developer? <strong>Contact me!</strong>
+      </p>
+    </div>
+
+    <!-- Rechts -->
+    <div class="contact-right">
+      <form>
+
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+
+        <textarea placeholder="Your message" rows="5" required></textarea>
+
+        <div class="checkbox">
+          <input type="checkbox" id="privacy" required>
+          <label for="privacy">
+            I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
+          </label>
+        </div>
+
+        <button type="submit">Send message :)</button>
+
+      </form>
+    </div>
+
+  </div>
+  <img class="contact-purple-shadow" src="assets/images/Purple shadow 4.png" alt="purple shadow">
+
+</section>
   `
 }
