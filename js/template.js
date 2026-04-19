@@ -374,3 +374,32 @@ function renderContactTemplate() {
 </section>
   `
 }
+
+function renderFooterTemplate() {
+  return `
+    <footer class="footer">
+      <div class="footer-content">
+        
+        <div class="footer-left">
+          <div class="footer-logo">
+            <span>Jakob</span>
+          </div>
+          <p class="footer-legal">Legal Notice</p>
+        </div>
+
+        <div class="footer-center">
+          <p class="footer-copyright">© Jakob Moussa 2026</p>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-social">
+            <a href="#" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
+            <a href="#" aria-label="Email"><img src="assets/images/icons/Email button.svg" alt="Email"></a>
+            <a href="#" aria-label="LinkedIn"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  `
+}

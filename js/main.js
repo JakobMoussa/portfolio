@@ -20,12 +20,17 @@ function renderContact() {
   document.getElementById("contact-section").innerHTML = renderContactTemplate();
 }
 
+function renderFooter() {
+  document.getElementById("footer-section").innerHTML = renderFooterTemplate();
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHero();
   renderAbout();
   renderSkills();
   renderPortfolio();
   renderContact();
+  renderFooter();
 });
 
 const testimonials = [
