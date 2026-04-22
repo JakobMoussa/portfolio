@@ -8,18 +8,14 @@
 body {
   background: #131c2f;
   color: white;
-  max-width: 1440px;
+  /* max-width: 1440px; */
+  width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
-  /* padding-bottom: 200px; */
 }
 
 #about-section {
   z-index: 3;
   position: relative;
-}
-
-#skills-section {
-  z-index: 3;
-  position: relative;
+  overflow-x: hidden;
 }

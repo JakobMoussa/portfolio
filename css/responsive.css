@@ -1,0 +1,532 @@
+/* ===== ALL RESPONSIVE / MEDIA QUERIES ===== */
+
+/* ---------- Testimonial shadow ---------- */
+@media (max-width: 1024px) {
+  .testimonial-green-shadow {
+    display: none;
+  }
+}
+
+/* ---------- Contact mobile ---------- */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-headline-container h2 {
+    font-size: 36px;
+  }
+}
+
+/* ---------- Footer mobile ---------- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-left {
+    align-items: center;
+  }
+
+  .footer-right {
+    justify-content: center;
+  }
+}
+
+/* ---------- Stage 1: 1350px and below ---------- */
+@media (max-width: 1350px) {
+
+  /* --- Hero --- */
+  .hero-side-text span {
+    font-size: 48px;
+  }
+
+  /* --- About --- */
+
+  .about-content {
+    padding-left: 70px;
+    padding-right: 70px;
+    gap: 40px;
+  }
+
+  .profile-2 {
+    width: 420px;
+    height: 420px;
+  }
+
+  .circle-line {
+    width: 100vw;
+  }
+
+  .image-line {
+    width: 120px;
+  }
+
+  /* --- Skills --- */
+  .skills-section {
+    margin-top: 130px;
+  }
+
+  .left-container {
+    margin-left: 70px;
+  }
+
+  .right-container {
+    margin-right: 70px;
+  }
+
+  .skills-txt h1 {
+    margin-bottom: 30px;
+  }
+
+  .icon {
+    height: 70px;
+    width: 70px;
+  }
+
+  .main-icon {
+    width: 66px;
+  }
+
+  .skills-box {
+    gap: 0px 24px;
+  }
+
+  .txt-1 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .txt-2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+
+  .txt-3 {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    padding: 15px 34px;
+    font-size: 20px;
+  }
+
+  /* --- Portfolio --- */
+  .portfolio-headline {
+    margin-top: 100px;
+  }
+
+  .portfolio-headline::after {
+    justify-self: stretch;
+  }
+
+  .portfolio-project .project-media {
+    flex: 0 0 520px;
+  }
+
+  .portfolio-project .project-content {
+    max-width: 440px;
+  }
+
+  .live-btn,
+  .github-btn {
+    font-size: 20px;
+    padding: 12px 24px;
+  }
+
+  /* --- Testimonial --- */
+  .portfolio-reference {
+    margin-top: 100px;
+    width: min(100%, 1050px);
+    gap: 30px;
+  }
+
+  .testimonial-card-wrap {
+    flex: 0 0 700px;
+    max-width: 700px;
+  }
+
+  .testimonial-card {
+    max-width: 700px;
+    padding: 40px 56px;
+  }
+
+  .testimonial-text {
+    font-size: 30px;
+  }
+
+  .testimonial-author {
+    font-size: 24px;
+  }
+
+  .testimonial-line {
+    width: 240px;
+  }
+
+  .testimonial-person {
+    width: 230px;
+    height: 230px;
+  }
+
+  .testimonial-person-wrap {
+    flex: 0 0 230px;
+  }
+
+  .testimonial-person-line {
+    width: 100px;
+  }
+
+  .testimonial-quote {
+    width: 76px;
+    top: -28px;
+    left: -44px;
+  }
+
+  /* --- Contact --- */
+
+  .contact-headline-container .line {
+    width: 400px;
+  }
+
+  .contact-left {
+    margin-left: 70px;
+  }
+
+  .contact-left h3 {
+    font-size: 28px;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 50px 60px 35px 60px;
+  }
+
+  /* --- General p tag --- */
+  p {
+    margin-right: 70px;
+  }
+}
+
+/* ---------- Stage 2: 1100px and below ---------- */
+@media (max-width: 1100px) {
+
+  /* --- Hero --- */
+  .hero-side-text span {
+    font-size: 40px;
+  }
+
+  /* --- About --- */
+  .about-topbar {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  .topbar-line {
+    flex: 0 0 120px;
+  }
+
+  .email a {
+    font-size: 19px;
+  }
+
+  .about-text h2 {
+    margin-bottom: 14px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  .about-content {
+    padding-left: 50px;
+    padding-right: 50px;
+    gap: 30px;
+  }
+
+  .profile-2 {
+    width: 340px;
+    height: 340px;
+  }
+
+  .image-circle {
+    border-width: 3px;
+  }
+
+  .circle-line {
+    width: 100vw;
+    height: 3px;
+  }
+
+  .image-line {
+    width: 90px;
+    height: 3px;
+  }
+
+  .about-items {
+    gap: 14px;
+  }
+
+  .about-item {
+    gap: 10px;
+  }
+
+  /* --- Skills --- */
+  .skills-section {
+    margin-top: 100px;
+  }
+
+  .left-container {
+    margin-left: 50px;
+  }
+
+  .right-container {
+    margin-right: 50px;
+  }
+
+  .skills-txt h1 {
+    margin-bottom: 24px;
+  }
+
+  .skills-txt h1::after {
+    width: 100vw;
+  }
+
+  .icon {
+    height: 58px;
+    width: 58px;
+  }
+
+  .main-icon {
+    width: 54px;
+  }
+
+  .skills-box {
+    gap: 0px 18px;
+  }
+
+  .txt-1 {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .txt-2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+  }
+
+  .txt-3 {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .btn {
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+
+  /* --- Portfolio --- */
+  .portfolio-section {
+    width: min(100%, 960px);
+    max-width: 960px;
+  }
+
+  .portfolio-headline {
+    margin-top: 80px;
+    gap: 16px;
+  }
+
+  .portfolio-headline::before {
+    width: 60px;
+  }
+
+  .portfolio-headline::after {
+    justify-self: stretch;
+  }
+
+  .portfolio-section p {
+    font-size: 17px;
+  }
+
+  .portfolio-project .project-media {
+    flex: 0 0 430px;
+  }
+
+  .portfolio-project .project-content {
+    max-width: 380px;
+  }
+
+  .portfolio-project .project-content h2 {
+    font-size: 28px;
+  }
+
+  .portfolio-project .project-content h3 {
+    font-size: 15px;
+  }
+
+  .live-btn,
+  .github-btn {
+    font-size: 17px;
+    padding: 10px 20px;
+  }
+
+  .project-actions {
+    margin-top: 20px;
+    gap: 16px;
+  }
+
+  .crm-shadow {
+    left: -40px;
+  }
+
+  /* --- Testimonial --- */
+  .portfolio-reference {
+    margin-top: 80px;
+    width: min(100%, 900px);
+    gap: 24px;
+  }
+
+  .testimonial-card-wrap {
+    flex: 0 0 580px;
+    max-width: 580px;
+  }
+
+  .testimonial-card {
+    max-width: 580px;
+    min-height: 220px;
+    padding: 34px 44px;
+    border-radius: 30px;
+    border-width: 3px;
+  }
+
+  .testimonial-text {
+    font-size: 24px;
+  }
+
+  .testimonial-footer {
+    margin-top: 40px;
+    gap: 14px;
+  }
+
+  .testimonial-author {
+    font-size: 20px;
+  }
+
+  .testimonial-line {
+    width: 180px;
+  }
+
+  .testimonial-person {
+    width: 190px;
+    height: 190px;
+    border-width: 3px;
+  }
+
+  .testimonial-person-wrap {
+    flex: 0 0 190px;
+  }
+
+  .testimonial-person-line {
+    width: 70px;
+    height: 3px;
+  }
+
+  .testimonial-quote {
+    width: 64px;
+    top: -24px;
+    left: -36px;
+  }
+
+  .nav-arrow {
+    font-size: 42px;
+  }
+
+  .testimonial-nav {
+    margin-top: 34px;
+    margin-bottom: 40px;
+  }
+
+  /* --- Contact --- */
+
+  .contact-headline-container {
+    margin-bottom: 40px;
+  }
+
+  .contact-headline-container .line {
+    width: 300px;
+  }
+
+  .contact-left {
+    margin-left: 50px;
+  }
+
+  .contact-left h3 {
+    font-size: 24px;
+  }
+
+  .contact-left p {
+    font-size: 14px;
+  }
+
+  .contact-right input,
+  .contact-right textarea {
+    max-width: 480px;
+  }
+
+  .contact-right button {
+    max-width: 480px;
+  }
+
+  .contact-purple-shadow {
+    right: 800px;
+  }
+
+  /* --- Footer --- */
+  .footer {
+    padding: 40px 50px 30px 50px;
+  }
+
+  .footer-content {
+    gap: 24px;
+  }
+
+  .footer-logo span {
+    font-size: 26px;
+  }
+
+  .footer-legal {
+    font-size: 12px;
+  }
+
+  .footer-copyright {
+    font-size: 14px;
+  }
+
+  .footer-social {
+    gap: 16px;
+  }
+
+  .footer-social a {
+    width: 34px;
+    height: 34px;
+  }
+
+  .footer-social img {
+    width: 22px;
+    height: 22px;
+  }
+
+  p {
+    margin-right: 50px;
+    font-size: 14px;
+  }
+}

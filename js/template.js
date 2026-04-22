@@ -204,7 +204,11 @@ function renderSkillsTemplate() {
 function renderPortfolioTemplate() {
   return `
         <section class="portfolio-section">
-          <h1 class="portfolio-headline">Portfolio</h1>
+          <div class="portfolio-headline">
+            <span class="headline-line headline-line-left"></span>
+            <h1>Portfolio</h1>
+            <span class="headline-line headline-line-right"></span>
+          </div>
           <p>Explore a selection of my work here - 
           Interact with projects to see my skills in action.</p>
 
@@ -388,7 +392,7 @@ function renderFooterTemplate() {
         </div>
 
         <div class="footer-center">
-          <p class="footer-copyright">© Jakob Moussa 2026</p>
+          <p class="footer-copyright">© Jakob Moussa 2024</p>
         </div>
 
         <div class="footer-right">
