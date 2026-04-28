@@ -1,63 +1,479 @@
 /* ===== ALL RESPONSIVE / MEDIA QUERIES ===== */
 
-/* ---------- Testimonial shadow ---------- */
-@media (max-width: 1024px) {
-  .testimonial-green-shadow {
-    display: none;
+/* ---------- under 1440px ---------- */
+@media (min-width: 1380px) and (max-width: 1439px) {
+  .hero-main-text h1 {
+    font-size: 80px;
+  }
+
+  .hero-main-text h2 {
+    font-size: 47px;
+  }
+
+  .hero-side-text span {
+    font-size: 57px !important;
   }
 }
 
-/* ---------- Contact mobile ---------- */
-@media (max-width: 900px) {
-  .contact-container {
-    grid-template-columns: 1fr;
+@media (min-width: 1300px) and (max-width: 1379px) {
+  .hero-main-text h1 {
+    font-size: 75px;
+  }
+
+  .hero-main-text h2 {
+    font-size: 44px;
+  }
+
+  .hero-side-text span {
+    font-size: 52px !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .hero-main-text h1 {
+    font-size: 70px;
+  }
+
+  .hero-main-text h2 {
+    font-size: 40px;
+  }
+
+  .hero-side-text span {
+    font-size: 48px !important;
+  }
+
+  .profile-2 {
+    width: 375px;
+    height: 375px;
+  }
+
+  .about-image {
+    transform: translateX(-80px);
+  }
+
+  .contact-right {
+    margin-right: 70px;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1199px) {
+  .hero-main-text h1 {
+    font-size: 65px;
+  }
+
+  .hero-main-text h2 {
+    font-size: 38px;
+  }
+
+  .hero-side-text span {
+    font-size: 44px !important;
+  }
+
+  .profile-2 {
+    width: 350px;
+    height: 350px;
+  }
+
+  .profile-img {
+    top: 20px !important;
+  }
+
+  .about-image {
+    transform: translateX(-65px);
+  }
+
+  .contact-purple-shadow {
+    right: 920px;
+  }
+
+  .contact-right {
+    margin-right: 70px;
+  }
+
+  .portfolio-reference {
+    width: min(100%, 980px) !important;
+  }
+
+  .testimonial-card {
+    max-width: 670px;
+  }
+
+  .headline-line-right {
+    width: 40px;
+  }
+
+  .green-shadow-2 {
+    width: 200px;
+    height: 600px;
+  }
+
+  .portfolio-project {
+    gap: 0;
+  }
+
+  .crm-shadow {
+    left: 0;
+    height: 700px;
+    width: 350px;
+  }
+
+  .contact-purple-shadow {
+    right: 844px;
+  }
+
+  .testimonial-card {
+    max-width: 650px;
+  }
+
+  .portfolio-reference {
+    width: min(100%, 940px) !important;
+  }
+
+  .about-text h2 {
+    font-size: 70px;
+  }
+
+  .skills-txt h1 {
+    font-size: 70px;
+  }
+
+  .portfolio-headline h1 {
+    font-size: 70px;
+  }
+
+  .contact-headline {
+    font-size: 70px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1099px) {
+  .hero-main-text h1 {
+    font-size: 60px !important;
+  }
+
+  .hero-main-text h2 {
+    font-size: 35px;
+  }
+
+  .hero-side-text span {
+    font-size: 40px !important;
+  }
+
+  .about-text h2 {
+    font-size: 60px;
+  }
+
+  .skills-txt h1 {
+    font-size: 60px;
+  }
+
+  .portfolio-headline h1 {
+    font-size: 60px;
+  }
+
+  .contact-headline {
+    font-size: 60px;
+  }
+
+  .profile-2 {
+    width: 325px;
+    height: 325px;
+  }
+
+  .about-image {
+    transform: translateX(-60px);
+  }
+
+  .portfolio-reference {
+    width: min(100%, 870px) !important;
+  }
+
+  .testimonial-card {
+    padding: 20px 30px;
+  }
+
+  .testimonial-card-wrap {
+    max-width: 600px !important;
+  }
+
+  .crm-shadow {
+    left: 0;
+    height: 600px;
+    width: 300px;
+  }
+
+  .contact-right form {
+    margin-right: 70px;
+  }
+
+  .testimonial-card {
+    min-height: 250px;
+  }
+
+  .contact-purple-shadow {
+    right: 780px;
+  }
+
+  .green-shadow-2 {
+    width: 170px;
+    height: 400px;
+  }
+
+  .profile-img {
+    top: 30px !important;
+  }
+
+  .portfolio-project {
+    gap: 0;
+  }
+
+  .testimonial-card {
+    max-width: 530px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+  .hero-main-text h1 {
+    font-size: 60px !important;
+  }
+
+  .hero-main-text h2 {
+    font-size: 35px;
+  }
+
+  .hero-side-text span {
+    font-size: 40px !important;
+  }
+
+  .profile-2 {
+    width: 270px !important;
+    height: 270px !important;
+  }
+
+  .portfolio-project .project-content {
+    max-width: 300px;
+  }
+
+  .portfolio-project .project-media {
+    flex: 0 0 400px !important;
+  }
+
+  .portfolio-project {
+    margin-top: 20px;
+    gap: 0;
+  }
+
+  .crm-shadow {
+    height: 400px !important;
+    width: 300px !important;
+  }
+
+  .about-image {
+    transform: translateX(-40px);
+  }
+
+  .skills-txt h1 {
+    font-size: 60px;
+  }
+
+  .about-text h2 {
+    font-size: 60px;
+  }
+
+  .portfolio-headline h1 {
+    font-size: 60px;
+  }
+
+  .testimonial-card {
+    max-width: 550px;
+    padding: 20px 36px;
+  }
+
+  .testimonial-card-wrap {
+    flex: 0 0 500px !important;
+    max-width: 500px !important;
+  }
+
+  .portfolio-reference {
+    gap: 0;
+    width: min(100%, 800px) !important;
+  }
+
+  .green-shadow-2 {
+    width: 250px;
+    height: 600px;
+  }
+
+  .contact-right form {
+    margin-right: 70px;
   }
 
   .contact-headline-container h2 {
-    font-size: 36px;
+    font-size: 60px;
+  }
+
+  .profile-img {
+    width: 400px;
+    height: 400px;
+    top: 90px !important;
+  }
+
+  .skills-box {
+    gap: 0px 0px !important;
   }
 }
 
-/* ---------- Footer mobile ---------- */
-@media (max-width: 768px) {
-  .footer {
-    padding: 40px 20px;
+@media (min-width: 800px) and (max-width: 899px) {
+  .hero-main-text h1 {
+    font-size: 50px !important;
   }
 
-  .footer-content {
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
+  .hero-main-text h2 {
+    font-size: 30px;
   }
 
-  .footer-left {
-    align-items: center;
+  .hero-side-text span {
+    font-size: 35px !important;
   }
 
-  .footer-right {
-    justify-content: center;
+  .profile-img {
+    width: 350px;
+    height: 350px;
+    top: 50px !important;
+  }
+
+  .Hero-button {
+    font-size: 20px;
+  }
+
+  .vector {
+    top: 270px;
+  }
+
+  .about-topbar {
+    margin-top: 0px;
+  }
+
+  .skills-txt h1 {
+    font-size: 50px;
+  }
+
+  .about-text h2 {
+    font-size: 50px;
+  }
+
+  .portfolio-headline h1 {
+    font-size: 50px;
+  }
+
+  .profile-2 {
+    width: 230px !important;
+    height: 230px !important;
+  }
+
+  .about-image {
+    transform: translateX(0px);
+  }
+
+  .portfolio-project {
+    gap: 0;
+    margin-top: 40px;
+  }
+
+  .testimonial-card-wrap {
+    flex: 0 0 500px !important;
+    max-width: 400px !important;
+  }
+
+  .portfolio-reference {
+    gap: 0 !important;
+    width: min(100%, 700px) !important;
+  }
+
+  .portfolio-project .project-media {
+    flex: 0 0 320px !important;
+  }
+
+  .crm-shadow {
+    height: 400px !important;
+    width: 300px !important;
+  }
+
+  .green-shadow-2 {
+    width: 230px;
+    height: 500px;
+  }
+
+  .skills-box {
+    gap: 0px 0px !important;
+  }
+
+  .portfolio-section p {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  .testimonial-card {
+    max-width: 400px;
+    padding: 20px 31px;
+    min-height: 170px;
+  }
+
+  .testimonial-quote {
+    width: 60px !important;
+    top: -26px !important;
+    left: -21px !important;
+  }
+
+  .contact-headline {
+    font-size: 50px;
+  }
+
+  .contact-headline-container .line {
+    width: 328px !important;
+  }
+
+  .about-text p {
+    margin-right: 0px;
+  }
+
+  .contact-right form {
+    margin-right: 50px;
+  }
+
+  p {
+    margin-right: 10px;
+  }
+
+  .testimonial-person {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .testimonial-person-wrap {
+    flex: 0 0 200px !important;
+  }
+
+  .portfolio-project .project-content {
+    max-width: 390px !important;
   }
 }
 
 /* ---------- Stage 1: 1350px and below ---------- */
 @media (max-width: 1350px) {
-
   /* --- Hero --- */
   .hero-side-text span {
     font-size: 48px;
   }
 
   /* --- About --- */
-
   .about-content {
     padding-left: 70px;
     padding-right: 70px;
     gap: 40px;
-  }
-
-  .profile-2 {
-    width: 420px;
-    height: 420px;
   }
 
   .circle-line {
@@ -81,7 +497,7 @@
     margin-right: 70px;
   }
 
-  .skills-txt h1 {
+  .skills-title-wrap {
     margin-bottom: 30px;
   }
 
@@ -153,11 +569,6 @@
     max-width: 700px;
   }
 
-  .testimonial-card {
-    max-width: 700px;
-    padding: 40px 56px;
-  }
-
   .testimonial-text {
     font-size: 30px;
   }
@@ -189,8 +600,6 @@
     left: -44px;
   }
 
-  /* --- Contact --- */
-
   .contact-headline-container .line {
     width: 400px;
   }
@@ -203,330 +612,27 @@
     font-size: 28px;
   }
 
-  /* --- Footer --- */
   .footer {
     padding: 50px 60px 35px 60px;
   }
-
-  /* --- General p tag --- */
-  p {
-    margin-right: 70px;
-  }
 }
 
-/* ---------- Stage 2: 1100px and below ---------- */
-@media (max-width: 1100px) {
-
-  /* --- Hero --- */
-  .hero-side-text span {
-    font-size: 40px;
-  }
-
-  /* --- About --- */
-  .about-topbar {
-    margin-top: 70px;
-    margin-bottom: 40px;
-  }
-
-  .topbar-line {
-    flex: 0 0 120px;
-  }
-
-  .email a {
-    font-size: 19px;
-  }
-
-  .about-text h2 {
-    margin-bottom: 14px;
-  }
-
-  .about-text p {
-    font-size: 14px;
-    max-width: 400px;
-    margin-bottom: 20px;
-  }
-
-  .about-content {
-    padding-left: 50px;
-    padding-right: 50px;
-    gap: 30px;
-  }
-
-  .profile-2 {
-    width: 340px;
-    height: 340px;
-  }
-
-  .image-circle {
-    border-width: 3px;
-  }
-
-  .circle-line {
-    width: 100vw;
-    height: 3px;
-  }
-
-  .image-line {
-    width: 90px;
-    height: 3px;
-  }
-
-  .about-items {
-    gap: 14px;
-  }
-
-  .about-item {
-    gap: 10px;
-  }
-
-  /* --- Skills --- */
-  .skills-section {
-    margin-top: 100px;
-  }
-
-  .left-container {
-    margin-left: 50px;
-  }
-
-  .right-container {
-    margin-right: 50px;
-  }
-
-  .skills-txt h1 {
-    margin-bottom: 24px;
-  }
-
-  .skills-txt h1::after {
-    width: 100vw;
-  }
-
-  .icon {
-    height: 58px;
-    width: 58px;
-  }
-
-  .main-icon {
-    width: 54px;
-  }
-
-  .skills-box {
-    gap: 0px 18px;
-  }
-
-  .txt-1 {
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-
-  .txt-2 {
-    font-size: 24px;
-    margin-bottom: 14px;
-  }
-
-  .txt-3 {
-    font-size: 14px;
-    margin-bottom: 24px;
-  }
-
-  .btn {
-    padding: 14px 28px;
-    font-size: 18px;
-    border-radius: 12px;
-  }
-
-  /* --- Portfolio --- */
-  .portfolio-section {
-    width: min(100%, 960px);
-    max-width: 960px;
-  }
-
-  .portfolio-headline {
-    margin-top: 80px;
-    gap: 16px;
-  }
-
-  .portfolio-headline::before {
-    width: 60px;
-  }
-
-  .portfolio-headline::after {
-    justify-self: stretch;
-  }
-
-  .portfolio-section p {
-    font-size: 17px;
-  }
-
-  .portfolio-project .project-media {
-    flex: 0 0 430px;
-  }
-
-  .portfolio-project .project-content {
-    max-width: 380px;
-  }
-
-  .portfolio-project .project-content h2 {
-    font-size: 28px;
-  }
-
-  .portfolio-project .project-content h3 {
-    font-size: 15px;
-  }
-
-  .live-btn,
-  .github-btn {
-    font-size: 17px;
-    padding: 10px 20px;
-  }
-
-  .project-actions {
-    margin-top: 20px;
-    gap: 16px;
-  }
-
-  .crm-shadow {
-    left: -40px;
-  }
-
-  /* --- Testimonial --- */
-  .portfolio-reference {
-    margin-top: 80px;
-    width: min(100%, 900px);
-    gap: 24px;
-  }
-
-  .testimonial-card-wrap {
-    flex: 0 0 580px;
-    max-width: 580px;
-  }
-
-  .testimonial-card {
-    max-width: 580px;
-    min-height: 220px;
-    padding: 34px 44px;
-    border-radius: 30px;
-    border-width: 3px;
-  }
-
-  .testimonial-text {
-    font-size: 24px;
-  }
-
-  .testimonial-footer {
-    margin-top: 40px;
-    gap: 14px;
-  }
-
-  .testimonial-author {
-    font-size: 20px;
-  }
-
-  .testimonial-line {
-    width: 180px;
-  }
-
-  .testimonial-person {
-    width: 190px;
-    height: 190px;
-    border-width: 3px;
-  }
-
-  .testimonial-person-wrap {
-    flex: 0 0 190px;
-  }
-
-  .testimonial-person-line {
-    width: 70px;
-    height: 3px;
-  }
-
-  .testimonial-quote {
-    width: 64px;
-    top: -24px;
-    left: -36px;
-  }
-
-  .nav-arrow {
-    font-size: 42px;
-  }
-
-  .testimonial-nav {
-    margin-top: 34px;
-    margin-bottom: 40px;
-  }
-
-  /* --- Contact --- */
-
-  .contact-headline-container {
-    margin-bottom: 40px;
-  }
-
-  .contact-headline-container .line {
-    width: 300px;
-  }
-
-  .contact-left {
-    margin-left: 50px;
-  }
-
-  .contact-left h3 {
-    font-size: 24px;
-  }
-
-  .contact-left p {
-    font-size: 14px;
-  }
-
-  .contact-right input,
-  .contact-right textarea {
-    max-width: 480px;
-  }
-
-  .contact-right button {
-    max-width: 480px;
-  }
-
-  .contact-purple-shadow {
-    right: 800px;
-  }
-
-  /* --- Footer --- */
+@media (max-width: 768px) {
   .footer {
-    padding: 40px 50px 30px 50px;
+    padding: 40px 20px;
   }
 
   .footer-content {
-    gap: 24px;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
   }
 
-  .footer-logo span {
-    font-size: 26px;
+  .footer-left {
+    align-items: center;
   }
 
-  .footer-legal {
-    font-size: 12px;
-  }
-
-  .footer-copyright {
-    font-size: 14px;
-  }
-
-  .footer-social {
-    gap: 16px;
-  }
-
-  .footer-social a {
-    width: 34px;
-    height: 34px;
-  }
-
-  .footer-social img {
-    width: 22px;
-    height: 22px;
-  }
-
-  p {
-    margin-right: 50px;
-    font-size: 14px;
+  .footer-right {
+    justify-content: center;
   }
 }

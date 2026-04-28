@@ -176,10 +176,13 @@ function renderSkillsTemplate() {
 
       <div class="right-container">
         <div class="skills-txt">
+          <div class="skills-title-wrap">
+            <h1>My Skills</h1>
+            <div class="skills-h1-line"></div>
+          </div>
 
-          <h1>My Skills</h1>
           <p class="txt-1">Als Frontend-Entwickler habe ich bereits mit verschiedenen<br>Technologien 
-              wie HTML, CSS, JavaScript und<br>modernen Frameworks gearbeitet.
+              wie HTML, CSS, JavaScript<br> undmodernen Frameworks gearbeitet.
           </p>
           
           <p class="txt-2">
@@ -209,7 +212,7 @@ function renderPortfolioTemplate() {
             <h1>Portfolio</h1>
             <span class="headline-line headline-line-right"></span>
           </div>
-          <p>Explore a selection of my work here - 
+          <p class="txt-portfolio">Explore a selection of my work here - 
           Interact with projects to see my skills in action.</p>
 
           <div class="portfolio-projects">
