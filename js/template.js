@@ -106,7 +106,7 @@ function renderAboutTemplate() {
               <div class="about-icon">
                 <img src="assets/images/icons/12. bulb desktop.svg" alt="">
               </div>
-              <p class="info-txt">
+              <p class="info-txt-2">
                   Ich bin offen für Neues und lerne gerne ständig dazu. 
                   Neue Technologien motivieren mich, meine Fähigkeiten weiterzuentwickeln und mich kontinuierlich zu verbessern.
               </p>

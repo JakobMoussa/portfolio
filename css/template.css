@@ -270,6 +270,10 @@
   text-align: start;
 }
 
+.info-txt-2 {
+  text-align: start;
+}
+
 .about-items {
   display: flex;
   flex-direction: column;
