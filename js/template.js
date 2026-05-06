@@ -5,7 +5,7 @@ function HeroTemplate() {
       <!-- Header -->
       <header class="hero-header">
         <div class="logo">
-          <span>Jakob</span>
+          <img src="assets/images/Jakob.svg" alt="Logo">
         </div>
 
           <div class="right-nav">
@@ -181,8 +181,8 @@ function renderSkillsTemplate() {
             <div class="skills-h1-line"></div>
           </div>
 
-          <p class="txt-1">Als Frontend-Entwickler habe ich bereits mit verschiedenen<br>Technologien 
-              wie HTML, CSS, JavaScript<br> undmodernen Frameworks gearbeitet.
+          <p class="txt-1">Als Frontend-Entwickler habe ich bereits mit<br>modernen Webtechnologien 
+          und Frameworks gearbeitet.
           </p>
           
           <p class="txt-2">

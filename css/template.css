@@ -11,11 +11,16 @@
   padding: clamp(25px, 3%, 40px) clamp(45px, 7%, 80px) clamp(15px, 2%, 25px) clamp(45px, 7%, 80px);
 }
 
-.logo span {
+/* .logo span {
   font-size: clamp(28px, 3.5vw, 40px);
   font-weight: 700;
   color: #ffffff;
   line-height: 1;
+} */
+
+.logo img {
+  width: 120px;
+  height: 100px;
 }
 
 .right-nav {

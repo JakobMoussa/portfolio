@@ -24,6 +24,38 @@ function renderFooter() {
   document.getElementById("footer-section").innerHTML = renderFooterTemplate();
 }
 
+function initMobileMenu() {
+  const rightNav = document.querySelector(".right-nav");
+  if (rightNav) {
+    rightNav.addEventListener("click", (e) => {
+      // Toggle menu if clicking the container or the hamburger/X
+      if(e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') {
+         if (document.body.classList.contains("menu-open")) {
+           closeMenu();
+         } else {
+           document.body.classList.add("menu-open");
+         }
+      }
+    });
+    
+    // Close menu when clicking a link
+    const navLinks = rightNav.querySelectorAll("a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+  }
+}
+
+function closeMenu() {
+  document.body.classList.add("menu-closing");
+  setTimeout(() => {
+    document.body.classList.remove("menu-open");
+    document.body.classList.remove("menu-closing");
+  }, 300);
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHero();
   renderAbout();
@@ -31,6 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderPortfolio();
   renderContact();
   renderFooter();
+  initMobileMenu();
 });
 
 const testimonials = [
