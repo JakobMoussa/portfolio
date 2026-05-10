@@ -5,7 +5,10 @@
   font-family: 'Arial', sans-serif;
 }
 
-html,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #131c2f;
   color: white;
@@ -18,4 +21,9 @@ body {
   z-index: 3;
   position: relative;
   overflow-x: hidden;
+}
+
+#skills-section {
+  position: relative;
+  overflow-x: clip;
 }

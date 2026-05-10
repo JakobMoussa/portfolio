@@ -194,13 +194,9 @@ function renderSkillsTemplate() {
           </p>
 
           <button class="btn">Get in touch</button>
-        
-        </div>
-
-      </div>
-      <img  class="green-shadow-2" src="assets/images/Green shadow 2 (1).png">
+          </div>
   </section>
-  
+  <img class="green-shadow-2" src="assets/images/Green shadow 2 (1).png">
   `
 }
 
@@ -310,7 +306,6 @@ function renderPortfolioTemplate() {
             </div>
 
             <div class="testimonial-person-wrap">
-              <img class="testimonial-green-shadow" src="assets/images/Green shadow 2 (2).png" alt="">
               <img class="testimonial-person" src="assets/images/profile.png" alt="Team partner portrait">
               <span class="testimonial-person-line"></span>
             </div>
@@ -324,6 +319,7 @@ function renderPortfolioTemplate() {
             <button class="nav-arrow" type="button" aria-label="next testimonial">&rarr;</button>
           </div>
         </section>
+        <img class="testimonial-green-shadow" src="assets/images/Green shadow 2 (2).png" alt="">
   `
 }
 
@@ -377,6 +373,7 @@ function renderContactTemplate() {
 
   </div>
   <img class="contact-purple-shadow" src="assets/images/Purple shadow 4.png" alt="purple shadow">
+  <a href="#hero-section" class="go-up-arrow"><img src="assets/images/go-up-arrow.png" alt="Go up" style="width: 100%; height: auto;"></a>
 
 </section>
   `
