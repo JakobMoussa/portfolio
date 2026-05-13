@@ -1,4 +1,104 @@
+let currentLanguage = 'EN';
+
+const translations = {
+  EN: {
+    navAbout: "About me",
+    navSkills: "Skills",
+    navPortfolio: "Portfolio",
+    heroAm: "I am",
+    heroRole: "FRONTEND DEVELOPER",
+    heroBtn: "Let’s talk!",
+    heroScroll: "Scroll down",
+
+    aboutMeTitle: "About me",
+    aboutMeText: "I am interested in IT and especially in programming. Coding is fun for me because I can use it to solve problems and implement my own ideas. I improve myself through practice, tutorials, and personal projects.",
+    aboutLocText: "I am currently based in Germany and open to remote work as well as relocation.",
+    aboutLearnText: "I am open to new things and love to learn constantly. New technologies motivate me to develop my skills further and continuously improve myself.",
+    aboutSolveText: "My approach to problem-solving is based on analytical thinking, creativity, and perseverance. I learn from every challenge and look for the most efficient and elegant solutions possible. Collaboration is also important to me, to incorporate different perspectives.",
+
+    skillsSpecial: "I have a special interest in learning",
+    skillsTitle: "My Skills",
+    skillsTxt1: "As a frontend developer, I have already worked with<br>modern web technologies and frameworks.",
+    skillsTxt2_1: "Looking for ",
+    skillsTxt2_2: "another skill?",
+    skillsTxt3: "I am passionate about constantly expanding my knowledge<br>and using modern tools in my projects.",
+    skillsBtn: "Get in touch",
+
+    portfolioTitle: "Portfolio",
+    portfolioDesc: "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    joinDesc: "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
+    liveTest: "Live test",
+    sharkieDesc: "A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.",
+    crmDesc: "A very simple customer relationship management system working with CRUD functionality.",
+    pokeDesc: "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
+    daDesc: "This app is a Slack clone app. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
+
+    contactTitle: "Contact",
+    contactProb: "Got a problem to solve?",
+    contactDesc1: "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+    contactDesc2_1: "Need a Frontend developer? ",
+    contactDesc2_2: "Contact me!",
+    placeholderName: "Your name",
+    placeholderEmail: "Your email",
+    placeholderMsg: "Your message",
+    privacyText: "I've read the ",
+    privacyLink: "privacy policy",
+    privacyTextEnd: " and agree to the processing of my data.",
+    sendBtn: "Send message :)",
+
+    legalNotice: "Legal Notice",
+  },
+  DE: {
+    navAbout: "Über mich",
+    navSkills: "Fähigkeiten",
+    navPortfolio: "Portfolio",
+    // heroAm: "Ich bin",
+    // heroRole: "FRONTEND ENTWICKLER",
+    heroBtn: "Lass uns reden!",
+    heroScroll: "Runter scrollen",
+
+    aboutMeTitle: "Über mich",
+    aboutMeText: "Ich interessiere mich für IT und besonders für Programmierung. Coding macht mir Spaß, weil ich damit Probleme lösen und eigene Ideen umsetzen kann. Ich verbessere mich durch Übung, Tutorials und eigene Projekte.",
+    aboutLocText: "Ich bin derzeit in Deutschland ansässig und offen für Remote-Arbeit sowie einen Umzug.",
+    aboutLearnText: "Ich bin offen für Neues und lerne gerne ständig dazu. Neue Technologien motivieren mich, meine Fähigkeiten weiterzuentwickeln und mich kontinuierlich zu verbessern.",
+    aboutSolveText: "Mein Problemlösungsansatz basiert auf analytischem Denken, Kreativität und Ausdauer. Ich lerne aus jeder Herausforderung und suche nach möglichst effizienten und eleganten Lösungen. Dabei ist mir auch Zusammenarbeit wichtig, um unterschiedliche Perspektiven einzubeziehen.",
+
+    skillsSpecial: "Mein besonderes Interesse gilt dem Lernen",
+    skillsTitle: "Meine Fähigkeiten",
+    skillsTxt1: "Als Frontend-Entwickler habe ich bereits mit<br>modernen Webtechnologien und Frameworks gearbeitet.",
+    skillsTxt2_1: "Suchst du nach ",
+    skillsTxt2_2: "einer anderen Fähigkeit?",
+    skillsTxt3: "Es begeistert mich, mein Wissen ständig zu erweitern<br>und moderne Tools in meinen Projekten einzusetzen.",
+    skillsBtn: "Kontakt aufnehmen",
+
+    portfolioTitle: "Portfolio",
+    portfolioDesc: "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    joinDesc: "Ein vom Kanban-System inspirierter Task-Manager. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
+    liveTest: "Live-Test",
+    sharkieDesc: "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Schwertwal zu kämpfen.",
+    crmDesc: "Ein sehr einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.",
+    pokeDesc: "Basierend auf der PokeAPI, eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
+    daDesc: "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit einer intuitiven Benutzeroberfläche, Echtzeit-Nachrichten und einer robusten Kanalorganisation.",
+
+    contactTitle: "Kontakt",
+    contactProb: "Hast du ein Problem zu lösen?",
+    contactDesc1: "Ermutige Leute, dich zu kontaktieren und beschreibe, an welcher Rolle du interessiert bist. Zeige, dass du ihren Projekten durch deine Arbeit einen Mehrwert bieten wirst.",
+    contactDesc2_1: "Brauchst du einen Frontend-Entwickler? ",
+    contactDesc2_2: "Kontaktiere mich!",
+    placeholderName: "Dein Name",
+    placeholderEmail: "Deine E-Mail",
+    placeholderMsg: "Deine Nachricht",
+    privacyText: "Ich habe die ",
+    privacyLink: "Datenschutzrichtlinie",
+    privacyTextEnd: " gelesen und stimme der Verarbeitung meiner Daten zu.",
+    sendBtn: "Nachricht senden :)",
+
+    legalNotice: "Impressum",
+  }
+};
+
 function HeroTemplate() {
+  const t = translations[currentLanguage];
   return `
     <section class="hero">
 
@@ -10,14 +110,14 @@ function HeroTemplate() {
 
           <div class="right-nav">
             <nav class="nav">
-              <a href="#">About me</a>
-              <a href="#">Skills</a>
-              <a href="#">Portfolio</a>
+              <a href="#about-section">${t.navAbout}</a>
+              <a href="#skills-section">${t.navSkills}</a>
+              <a href="#portfolio-section">${t.navPortfolio}</a>
             </nav>
 
             <div class="language-switch">
-              <button>DE</button>
-              <button class="active">EN</button>
+              <button class="${currentLanguage === 'DE' ? 'active' : ''}">DE</button>
+              <button class="${currentLanguage === 'EN' ? 'active' : ''}">EN</button>
             </div>
           </div>
       </header>
@@ -43,13 +143,13 @@ function HeroTemplate() {
             </div>
           </div>
 
-          <button class="Hero-button">Let’s talk!</button>
+          <button class="Hero-button">${t.heroBtn}</button>
         </div>
 
       </div>
 
       <img class="vector" src="assets/images/Vector (1).png">
-        <span class="scroll-txt">Scroll down
+        <span class="scroll-txt">${t.heroScroll}
         <img  class="arrow-icon" src="assets/images/icons/arrow.svg"/>
         </span>
       </div>
@@ -60,6 +160,7 @@ function HeroTemplate() {
 }
 
 function renderAboutTemplate() {
+  const t = translations[currentLanguage];
   return `
     <section class="about-me">
 
@@ -83,12 +184,10 @@ function renderAboutTemplate() {
 
         <!-- Left -->
         <div class="about-text">
-          <h2>About me</h2>
+          <h2>${t.aboutMeTitle}</h2>
 
           <p class="txt">
-          Ich interessiere mich für IT und besonders für Programmierung.
-          Coding macht mir Spaß, weil ich damit Probleme lösen und eigene Ideen umsetzen kann.
-          Ich verbessere mich durch Übung, Tutorials und eigene Projekte.
+          ${t.aboutMeText}
           </p>
 
           <div class="about-items">
@@ -98,7 +197,7 @@ function renderAboutTemplate() {
                 <img src="assets/images/icons/11.Location.svg" alt="">
               </div>
               <p class="info-txt">
-               Ich bin derzeit in Deutschland ansässig und offen für Remote-Arbeit sowie einen Umzug.
+               ${t.aboutLocText}
               </p>
             </div>
 
@@ -107,8 +206,7 @@ function renderAboutTemplate() {
                 <img src="assets/images/icons/12. bulb desktop.svg" alt="">
               </div>
               <p class="info-txt-2">
-                  Ich bin offen für Neues und lerne gerne ständig dazu. 
-                  Neue Technologien motivieren mich, meine Fähigkeiten weiterzuentwickeln und mich kontinuierlich zu verbessern.
+                  ${t.aboutLearnText}
               </p>
             </div>
 
@@ -117,9 +215,7 @@ function renderAboutTemplate() {
                 <img src="assets/images/icons/13. puzzle desktop.svg" alt="">
               </div>
               <p class="info-txt">
-                Mein Problemlösungsansatz basiert auf analytischem Denken, Kreativität und Ausdauer.
-                Ich lerne aus jeder Herausforderung und suche nach möglichst effizienten und eleganten Lösungen.
-                Dabei ist mir auch Zusammenarbeit wichtig, um unterschiedliche Perspektiven einzubeziehen.
+                ${t.aboutSolveText}
               </p>
             </div>
 
@@ -140,6 +236,7 @@ function renderAboutTemplate() {
   `;
 }
 function renderSkillsTemplate() {
+  const t = translations[currentLanguage];
   return `
 
   <section class="skills-section">
@@ -160,7 +257,7 @@ function renderSkillsTemplate() {
             <div class="learning-card">
               <img class="main-icon" src="assets/images/icons/icon-11.svg" alt="Learning Icon">
               <div class="skill-bubble">
-                <p class="bubble-txt">I have a special interest in learning</p>
+                <p class="bubble-txt">${t.skillsSpecial}</p>
 
                 <div class="bubble-icons">
                   <img src="assets/images/icons/react.svg" alt="React">
@@ -177,23 +274,19 @@ function renderSkillsTemplate() {
       <div class="right-container">
         <div class="skills-txt">
           <div class="skills-title-wrap">
-            <h1>My Skills</h1>
+            <h1>${t.skillsTitle}</h1>
             <div class="skills-h1-line"></div>
           </div>
 
-          <p class="txt-1">Als Frontend-Entwickler habe ich bereits mit<br>modernen Webtechnologien 
-          und Frameworks gearbeitet.
-          </p>
+          <p class="txt-1">${t.skillsTxt1}</p>
           
           <p class="txt-2">
-            Looking for <span>another skill?</span>
+            ${t.skillsTxt2_1}<span>${t.skillsTxt2_2}</span>
           </p>
 
-          <p class="txt-3">Es begeistert mich, mein Wissen ständig zu erweitern<br>
-              und moderne Tools in meinen Projekten einzusetzen.
-          </p>
+          <p class="txt-3">${t.skillsTxt3}</p>
 
-          <button class="btn">Get in touch</button>
+          <button class="btn">${t.skillsBtn}</button>
           </div>
   </section>
   <img class="green-shadow-2" src="assets/images/Green shadow 2 (1).png">
@@ -201,15 +294,15 @@ function renderSkillsTemplate() {
 }
 
 function renderPortfolioTemplate() {
+  const t = translations[currentLanguage];
   return `
         <section class="portfolio-section">
           <div class="portfolio-headline">
             <span class="headline-line headline-line-left"></span>
-            <h1>Portfolio</h1>
+            <h1>${t.portfolioTitle}</h1>
             <span class="headline-line headline-line-right"></span>
           </div>
-          <p class="txt-portfolio">Explore a selection of my work here - 
-          Interact with projects to see my skills in action.</p>
+          <p class="txt-portfolio">${t.portfolioDesc}</p>
 
           <div class="portfolio-projects">
             <article class="portfolio-project">
@@ -219,10 +312,10 @@ function renderPortfolioTemplate() {
               <div class="project-content">
                 <h2>Join</h2>
                 <h3>Angular | TypeScript | HTML | CSS | Firebase</h3>
-                <p class="p-txt">Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.</p>
+                <p class="p-txt">${t.joinDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
-                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
+                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/6-join/index.html" class="project-btn">${t.liveTest}</a></button>
+                  <button class="github-btn"><a href="https://github.com/JakobMoussa/Join" class="project-btn">Github</a></button>
                 </div>
               </div>
             </article>
@@ -231,10 +324,10 @@ function renderPortfolioTemplate() {
               <div class="project-content">
                 <h2>Sharkie</h2>
                 <h3>JavaScript | HTML | CSS</h3>
-                <p class="p-txt">A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.</p>
+                <p class="p-txt">${t.sharkieDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
-                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
+                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/Sharkie/index.html" class="project-btn">${t.liveTest}</a></button>
+                  <button class="github-btn"><a href="https://github.com/JakobMoussa/sharkie" class="project-btn">Github</a></button>
                 </div>
               </div>
               <div class="project-media">
@@ -250,9 +343,9 @@ function renderPortfolioTemplate() {
               <div class="project-content">
                 <h2>Simple CRM</h2>
                 <h3>Angular | Firebase</h3>
-                <p class="p-txt">A very simple customer relationship management system working with CRUD functionality.</p>
+                <p class="p-txt">${t.crmDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
+                  <button class="live-btn"><a href="#" class="project-btn">${t.liveTest}</a></button>
                   <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
                 </div>
               </div>
@@ -262,10 +355,10 @@ function renderPortfolioTemplate() {
               <div class="project-content">
                 <h2>Pokedex</h2>
                 <h3>JavaScript | HTML | CSS | Api</h3>
-                <p class="p-txt">Based on the PokeAPI a simple library that provides and catalogues pokemon information.</p>
+                <p class="p-txt">${t.pokeDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
-                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
+                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/Pokomon/index.html" class="project-btn">${t.liveTest}</a></button>
+                  <button class="github-btn"><a href="https://github.com/JakobMoussa/pokedex" class="project-btn">Github</a></button>
                 </div>
               </div>
               <div class="project-media">
@@ -280,9 +373,9 @@ function renderPortfolioTemplate() {
               <div class="project-content">
                 <h2>DA Bubble</h2>
                 <h3>Angular | TypeScript | Firebase</h3>
-                <p class="p-txt">This app is a Slack clone app. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.</p>
+                <p class="p-txt">${t.daDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="#" class="project-btn">Live test</a></button>
+                  <button class="live-btn"><a href="#" class="project-btn">${t.liveTest}</a></button>
                   <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
                 </div>
               </div>
@@ -295,12 +388,11 @@ function renderPortfolioTemplate() {
 
               <div class="testimonial-card">
                 <p class="testimonial-text">
-                  Michael really kept the team together with his great organization and clear communication.
-                  We wouldn't have got this far without his commitment.
+                  <!-- Text gets updated dynamically -->
                 </p>
                 <div class="testimonial-footer">
                   <span class="testimonial-line"></span>
-                  <span class="testimonial-author">V. Schuster - Team Partner</span>
+                  <span class="testimonial-author"><!-- Author gets updated dynamically --></span>
                 </div>
               </div>
             </div>
@@ -324,13 +416,14 @@ function renderPortfolioTemplate() {
 }
 
 function renderContactTemplate() {
+  const t = translations[currentLanguage];
   return `
 <section class="contact-section">
 
   <!-- Headline -->
   <div class="contact-headline-container">
     <span class="line"></span>
-    <h2 class="contact-headline">Contact</h2>
+    <h2 class="contact-headline">${t.contactTitle}</h2>
   </div>
 
   <!-- Content Bereich -->
@@ -338,35 +431,34 @@ function renderContactTemplate() {
 
     <!-- Links -->
     <div class="contact-left">
-      <h3>Got a problem to solve?</h3>
+      <h3>${t.contactProb}</h3>
 
       <p>
-        Encourage people to contact you and describe what role you are interested in.
-        Show that you will add value to their projects through your work.
+        ${t.contactDesc1}
       </p>
 
       <p>
-        Need a Frontend developer? <strong>Contact me!</strong>
+        ${t.contactDesc2_1}<strong>${t.contactDesc2_2}</strong>
       </p>
     </div>
 
     <!-- Rechts -->
     <div class="contact-right">
-      <form>
+      <form id="contact-form">
 
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
+        <input type="text" id="contact-name" placeholder="${t.placeholderName}" required>
+        <input type="email" id="contact-email" placeholder="${t.placeholderEmail}" required>
 
-        <textarea placeholder="Your message" rows="5" required></textarea>
+        <textarea id="contact-message" placeholder="${t.placeholderMsg}" rows="5" required></textarea>
 
         <div class="checkbox">
           <input type="checkbox" id="privacy" required>
           <label for="privacy">
-            I've read the <a href="#">privacy policy</a> and agree to the processing of my data.
+            ${t.privacyText}<a href="#">${t.privacyLink}</a>${t.privacyTextEnd}
           </label>
         </div>
 
-        <button type="submit">Send message :)</button>
+        <button type="submit">${t.sendBtn}</button>
 
       </form>
     </div>
@@ -380,6 +472,7 @@ function renderContactTemplate() {
 }
 
 function renderFooterTemplate() {
+  const t = translations[currentLanguage];
   return `
     <footer class="footer">
       <div class="footer-content">
@@ -388,7 +481,7 @@ function renderFooterTemplate() {
           <div class="footer-logo">
             <span>Jakob</span>
           </div>
-          <p class="footer-legal">Legal Notice</p>
+          <p class="footer-legal">${t.legalNotice}</p>
         </div>
 
         <div class="footer-center">
@@ -397,9 +490,9 @@ function renderFooterTemplate() {
 
         <div class="footer-right">
           <div class="footer-social">
-            <a href="#" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
+            <a href="https://github.com/JakobMoussa" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
             <a href="#" aria-label="Email"><img src="assets/images/icons/Email button.svg" alt="Email"></a>
-            <a href="#" aria-label="LinkedIn"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
+            <a href="https://www.linkedin.com/in/jakob-moussa/" aria-label="LinkedIn"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
           </div>
         </div>
 
