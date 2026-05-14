@@ -52,8 +52,6 @@ const translations = {
     navAbout: "Über mich",
     navSkills: "Fähigkeiten",
     navPortfolio: "Portfolio",
-    // heroAm: "Ich bin",
-    // heroRole: "FRONTEND ENTWICKLER",
     heroBtn: "Lass uns reden!",
     heroScroll: "Runter scrollen",
 
@@ -64,7 +62,7 @@ const translations = {
     aboutSolveText: "Mein Problemlösungsansatz basiert auf analytischem Denken, Kreativität und Ausdauer. Ich lerne aus jeder Herausforderung und suche nach möglichst effizienten und eleganten Lösungen. Dabei ist mir auch Zusammenarbeit wichtig, um unterschiedliche Perspektiven einzubeziehen.",
 
     skillsSpecial: "Mein besonderes Interesse gilt dem Lernen",
-    skillsTitle: "Meine Fähigkeiten",
+    skillsTitle: "Fähigkeiten",
     skillsTxt1: "Als Frontend-Entwickler habe ich bereits mit<br>modernen Webtechnologien und Frameworks gearbeitet.",
     skillsTxt2_1: "Suchst du nach ",
     skillsTxt2_2: "einer anderen Fähigkeit?",
@@ -128,7 +126,7 @@ function HeroTemplate() {
         <div class="hero-image">
           <img class="shadow-purple" src="assets/images/Purple shadow Foto.png" alt="glow-purple">
           <img class="shadow-green" src="assets/images/Green shadow Foto.png" alt="glow-green">
-          <img class="profile-img" src="assets/images/hero character photo.png" alt="Profile">
+          <img class="profile-img" src="assets/images/profile-img.png" alt="Profile">
         </div>
 
         <div class="hero-text">
@@ -266,8 +264,6 @@ function renderSkillsTemplate() {
               </div>
             </div>
           </div>
-            
-
         </div>
       </div>
 

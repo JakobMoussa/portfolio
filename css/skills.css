@@ -1,5 +1,3 @@
-/* ===== SKILLS SECTION ===== */
-
 .skills-section {
   position: relative;
   display: flex;
@@ -201,8 +199,6 @@
   transform: scale(1.1);
 }
 
-/* ===== SKILLS RESPONSIVE ===== */
-
 @media (min-width: 1100px) and (max-width: 1199px) {
   .skills-txt h1 {
     font-size: 70px;
@@ -211,13 +207,13 @@
 
 @media (min-width: 1000px) and (max-width: 1099px) {
   .skills-txt h1 {
-    font-size: 60px;
+    font-size: 60px !important;
   }
 }
 
 @media (min-width: 900px) and (max-width: 999px) {
   .skills-txt h1 {
-    font-size: 60px;
+    font-size: 60px !important;
   }
 
   .skills-box {
@@ -231,12 +227,21 @@
 
 @media (min-width: 800px) and (max-width: 899px) {
   .skills-txt h1 {
-    font-size: 50px;
+    font-size: 50px !important;
   }
 
   .skills-h1-line {
-    width: 60px !important;
+    width: 20px !important;
   }
+
+  .left-container {
+    margin-left: 30px !important;
+  }
+
+  .right-container {
+    margin-right: 30px !important;
+  }
+
 }
 
 @media (min-width: 700px) and (max-width: 799px) {
@@ -280,7 +285,7 @@
 
 @media (min-width: 600px) and (max-width: 699px) {
   .skills-txt h1 {
-    font-size: 35px;
+    font-size: 35px !important;
   }
 
   .icon {
@@ -339,7 +344,7 @@
 
 @media (min-width: 500px) and (max-width: 599px) {
   .skills-txt h1 {
-    font-size: 28px;
+    font-size: 28px !important;
   }
 
   .icon {
@@ -398,7 +403,7 @@
 
 @media (max-width: 499px) {
   .skills-txt h1 {
-    font-size: 28px;
+    font-size: 28px !important;
   }
 
   .icon {
@@ -455,7 +460,7 @@
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 499px) {
   .txt-1 {
     display: flex;
     justify-content: center;
@@ -517,8 +522,9 @@
 
   .txt-3 {
     order: 2;
-    margin-right: 30px;
-    text-align: start;
+    margin-right: 40px;
+    margin-left: 70px;
+    text-align: end;
   }
 
   .btn {
@@ -544,11 +550,11 @@
 
 @media (max-width: 399px) {
   .skills-txt h1 {
-    font-size: 38px;
+    font-size: 38px !important;
   }
 
   .txt-1 {
-    margin-right: 16px;
+    margin-right: 16px !important;
   }
 
   .btn {
@@ -559,7 +565,7 @@
 
 @media (max-width: 370px) {
   .skills-txt h1 {
-    font-size: 34px;
+    font-size: 34px !important;
   }
 
   .txt-1 {
@@ -591,6 +597,22 @@
 @media (max-width: 330px) {
   .btn {
     margin: 0 94px 26px 94px;
+  }
+}
+
+@media (max-width: 320px) {
+  .skills-txt h1 {
+    font-size: 30px !important;
+  }
+
+  .txt-2 {
+    font-size: 20px !important;
+  }
+
+  .btn {
+    margin: 0 84px 26px 84px;
+    font-size: 14px !important;
+    padding: 10px 16px !important;
   }
 }
 
