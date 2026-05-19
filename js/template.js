@@ -45,15 +45,13 @@ const translations = {
     privacyLink: "privacy policy",
     privacyTextEnd: " and agree to the processing of my data.",
     sendBtn: "Send message :)",
-
-    legalNotice: "Legal Notice",
   },
   DE: {
     navAbout: "Über mich",
     navSkills: "Fähigkeiten",
     navPortfolio: "Portfolio",
     heroBtn: "Lass uns reden!",
-    heroScroll: "Runter scrollen",
+    heroScroll: "Scroll down",
 
     aboutMeTitle: "Über mich",
     aboutMeText: "Ich interessiere mich für IT und besonders für Programmierung. Coding macht mir Spaß, weil ich damit Probleme lösen und eigene Ideen umsetzen kann. Ich verbessere mich durch Übung, Tutorials und eigene Projekte.",
@@ -91,7 +89,6 @@ const translations = {
     privacyTextEnd: " gelesen und stimme der Verarbeitung meiner Daten zu.",
     sendBtn: "Nachricht senden :)",
 
-    legalNotice: "Impressum",
   }
 };
 
@@ -141,7 +138,7 @@ function HeroTemplate() {
             </div>
           </div>
 
-          <button class="Hero-button">${t.heroBtn}</button>
+          <button class="Hero-button" onclick="window.location.href='#contact-section'">${t.heroBtn}</button>
         </div>
 
       </div>
@@ -173,7 +170,7 @@ function renderAboutTemplate() {
         </div>
 
         <div class="email">
-          <a href="mailto:jakobmoussa@gmail.com">jakobmoussa@gmail.com</a>
+          <a href="mailto:jakobmoussa@gmail.com">jakobmoussa@icloud.com</a>
         </div>
       </div>
 
@@ -282,7 +279,7 @@ function renderSkillsTemplate() {
 
           <p class="txt-3">${t.skillsTxt3}</p>
 
-          <button class="btn">${t.skillsBtn}</button>
+          <button class="btn" onclick="window.location.href='#contact-section'">${t.skillsBtn}</button>
           </div>
   </section>
   <img class="green-shadow-2" src="assets/images/Green shadow 2 (1).png">
@@ -358,7 +355,7 @@ function renderPortfolioTemplate() {
                 </div>
               </div>
               <div class="project-media">
-                <img src="assets/images/Pokédex photo.png">
+                <img src="assets/images/pokedex-photo.png">
               </div>
             </article>
 
@@ -477,11 +474,13 @@ function renderFooterTemplate() {
           <div class="footer-logo">
             <span>Jakob</span>
           </div>
-          <p class="footer-legal">${t.legalNotice}</p>
+          <p class="footer-legal">
+            <a class="impressum" href="impressum.html">Impressum</a> | <a class="datenschutz" href="datenschutz.html">Datenschutz</a>
+          </p>
         </div>
 
         <div class="footer-center">
-          <p class="footer-copyright">© Jakob Moussa 2024</p>
+          <p class="footer-copyright">© Jakob Moussa 2026</p>
         </div>
 
         <div class="footer-right">

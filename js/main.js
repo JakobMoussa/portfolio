@@ -28,7 +28,7 @@ function initMobileMenu() {
   const rightNav = document.querySelector(".right-nav");
   if (rightNav) {
     rightNav.addEventListener("click", (e) => {
-      if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') {
+      if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON' && !e.target.closest('.language-switch')) {
         if (document.body.classList.contains("menu-open")) {
           closeMenu();
         } else {
@@ -59,6 +59,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function renderAll() {
+  const scrollY = window.scrollY;
+  const wasMenuOpen = document.body.classList.contains("menu-open");
+
   renderHero();
   renderAbout();
   renderSkills();
@@ -69,18 +72,27 @@ function renderAll() {
   initLanguageSwitch();
   initContactForm();
   updateTestimonial(currentTestimonialIndex);
+
+  if (wasMenuOpen) {
+    const rightNav = document.querySelector(".right-nav");
+    if (rightNav) rightNav.style.animation = "none";
+  }
+
+  window.scrollTo(0, scrollY);
 }
 
 function initLanguageSwitch() {
-  const switchBtns = document.querySelectorAll('.language-switch button');
-  switchBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const lang = e.target.textContent.trim();
-      if (lang === currentLanguage) return;
-      currentLanguage = lang;
+  const languageSwitch = document.querySelector('.language-switch');
+  if (!languageSwitch) return;
 
-      renderAll();
-    });
+  languageSwitch.addEventListener('click', (e) => {
+    if (e.target.tagName !== 'BUTTON') return;
+
+    const lang = e.target.textContent.trim();
+    if (lang === currentLanguage) return;
+    currentLanguage = lang;
+
+    renderAll();
   });
 }
 
@@ -135,6 +147,7 @@ const testimonials = {
       image: "assets/images/profile.png"
     }
   ],
+
   DE: [
     {
       text: "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",

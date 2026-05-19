@@ -568,7 +568,7 @@
   }
 
   .right-nav {
-    gap: clamp(20px, 5vw, 60px) !important;
+    gap: 10px;
   }
 
   .language-switch {
@@ -576,7 +576,6 @@
   }
 
   .language-switch button {
-    width: 34px;
     height: 30px;
     font-size: 14px;
   }

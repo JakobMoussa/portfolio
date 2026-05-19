@@ -177,9 +177,20 @@ input {
 
 .footer-legal {
   font-size: 14px;
+  color: white;
   text-align: justify;
   color: #cbd5e1;
   margin: 0;
+}
+
+.datenschutz {
+  text-decoration: none;
+  color: white;
+}
+
+.impressum {
+  text-decoration: none;
+  color: white;
 }
 
 .footer-center {
@@ -341,6 +352,11 @@ input {
 
   .contact-container {
     gap: 20px !important;
+  }
+
+  .contact-purple-shadow {
+    height: 300px;
+    top: 350px;
   }
 
   .footer {
