@@ -147,7 +147,6 @@ function HeroTemplate() {
         <span class="scroll-txt">${t.heroScroll}
         <img  class="arrow-icon" src="assets/images/icons/arrow.svg"/>
         </span>
-      </div>
       <img class="purple-shadow-2" src="assets/images/Purple shadow 2 (1).png" />
 
     </section>
@@ -164,9 +163,9 @@ function renderAboutTemplate() {
         <div class="topbar-line"></div>
 
         <div class="social-links">
-          <a href="#"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
-          <a href="#"><img src="assets/images/icons/Email button.svg" alt="Mail"></a>
-          <a href="#"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
+          <a href="https://github.com/JakobMoussa" target="_blank" rel="noopener noreferrer"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
+          <a href="mailto:jakobmoussa@icloud.com"><img src="assets/images/icons/Email button.svg" alt="Mail"></a>
+          <a href="https://www.linkedin.com/in/jakob-moussa" target="_blank" rel="noopener noreferrer"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
         </div>
 
         <div class="email">
@@ -307,8 +306,8 @@ function renderPortfolioTemplate() {
                 <h3>Angular | TypeScript | HTML | CSS | Firebase</h3>
                 <p class="p-txt">${t.joinDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/6-join/index.html" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="https://github.com/JakobMoussa/Join" class="project-btn">Github</a></button>
+                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/6-join/index.html" target="_blank" rel="noopener noreferrer" class="project-btn">${t.liveTest}</a></button>
+                  <button class="github-btn"><a href="https://github.com/JakobMoussa/Join" target="_blank" rel="noopener noreferrer" class="project-btn">Github</a></button>
                 </div>
               </div>
             </article>
@@ -319,8 +318,8 @@ function renderPortfolioTemplate() {
                 <h3>JavaScript | HTML | CSS</h3>
                 <p class="p-txt">${t.sharkieDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/Sharkie/index.html" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="https://github.com/JakobMoussa/sharkie" class="project-btn">Github</a></button>
+                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/Sharkie/index.html" target="_blank" rel="noopener noreferrer" class="project-btn">${t.liveTest}</a></button>
+                  <button class="github-btn"><a href="https://github.com/JakobMoussa/sharkie" target="_blank" rel="noopener noreferrer" class="project-btn">Github</a></button>
                 </div>
               </div>
               <div class="project-media">
@@ -350,8 +349,8 @@ function renderPortfolioTemplate() {
                 <h3>JavaScript | HTML | CSS | Api</h3>
                 <p class="p-txt">${t.pokeDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/Pokomon/index.html" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="https://github.com/JakobMoussa/pokedex" class="project-btn">Github</a></button>
+                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/Pokomon/index.html" target="_blank" rel="noopener noreferrer" class="project-btn">${t.liveTest}</a></button>
+                  <button class="github-btn"><a href="https://github.com/JakobMoussa/pokedex" target="_blank" rel="noopener noreferrer" class="project-btn">Github</a></button>
                 </div>
               </div>
               <div class="project-media">
@@ -475,7 +474,7 @@ function renderFooterTemplate() {
             <span>Jakob</span>
           </div>
           <p class="footer-legal">
-            <a class="impressum" href="impressum.html">Impressum</a> | <a class="datenschutz" href="datenschutz.html">Datenschutz</a>
+            <a class="impressum" href="impressum.html">Legal Notice</a> | <a class="datenschutz" href="datenschutz.html">Privacy Policy</a>
           </p>
         </div>
 
@@ -485,9 +484,9 @@ function renderFooterTemplate() {
 
         <div class="footer-right">
           <div class="footer-social">
-            <a href="https://github.com/JakobMoussa" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
+            <a href="https://github.com/JakobMoussa" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
             <a href="#" aria-label="Email"><img src="assets/images/icons/Email button.svg" alt="Email"></a>
-            <a href="https://www.linkedin.com/in/jakob-moussa/" aria-label="LinkedIn"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
+            <a href="https://www.linkedin.com/in/jakob-moussa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
           </div>
         </div>
 

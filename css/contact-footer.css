@@ -232,11 +232,7 @@ input {
   height: 24px;
 }
 
-@media (min-width: 1750px) and (max-width: 1850px) {
-  .contact-left {
-    margin-left: 0px;
-  }
-}
+
 
 @media (min-width: 1200px) and (max-width: 1299px) {
   .contact-right {

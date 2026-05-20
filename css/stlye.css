@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
+  background: #131c2f;
   scroll-behavior: smooth;
 }
 
@@ -26,4 +29,10 @@ body {
 #skills-section {
   position: relative;
   overflow-x: clip;
+}
+
+@media (min-width: 1441px) {
+  html {
+    zoom: calc(100vw / 1440);
+  }
 }

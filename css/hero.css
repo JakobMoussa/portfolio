@@ -2,8 +2,12 @@
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   background: #131c2f;
+  box-shadow: -50vw 0 0 0 #131c2f, 50vw 0 0 0 #131c2f;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
@@ -242,103 +246,6 @@
   color: #8a3ffc;
 }
 
-@media (min-width: 2450px) and (max-width: 2560px) {
-  .vector {
-    top: 90px !important;
-  }
-
-  .scroll-txt {
-    top: clamp(506px, 56vw, 950px) !important;
-  }
-}
-
-@media (min-width: 2350px) and (max-width: 2450px) {
-  .vector {
-    top: 135px !important;
-  }
-
-  .scroll-txt {
-    top: clamp(506px, 56vw, 950px) !important;
-  }
-}
-
-@media (min-width: 2250px) and (max-width: 2350px) {
-  .vector {
-    top: 170px !important;
-  }
-}
-
-@media (min-width: 2150px) and (max-width: 2250px) {
-  .vector {
-    top: 190px !important;
-  }
-
-  .scroll-txt {
-    top: clamp(506px, 56vw, 950px) !important;
-  }
-}
-
-@media (min-width: 2050px) and (max-width: 2150px) {
-  .vector {
-    top: 220px !important;
-  }
-
-  .scroll-txt {
-    top: clamp(506px, 56vw, 950px) !important;
-  }
-}
-
-@media (min-width: 1950px) and (max-width: 2050px) {
-  .vector {
-    top: 250px !important;
-  }
-
-  .scroll-txt {
-    top: clamp(506px, 56vw, 950px) !important;
-  }
-}
-
-@media (min-width: 1850px) and (max-width: 1950px) {
-  .vector {
-    top: 300px !important;
-  }
-
-  .scroll-txt {
-    top: clamp(506px, 56vw, 950px) !important;
-  }
-}
-
-@media (min-width: 1750px) and (max-width: 1850px) {
-  .vector {
-    top: 300px !important;
-  }
-
-  .scroll-txt {
-    top: clamp(506px, 56vw, 950px) !important;
-  }
-}
-
-@media (min-width: 1650px) and (max-width: 1750px) {
-  .vector {
-    top: 320px !important;
-  }
-
-  .scroll-txt {
-    top: clamp(506px, 56vw, 950px) !important;
-  }
-}
-
-@media (min-width: 1551px) and (max-width: 1650px) {
-  .vector {
-    top: 350px !important;
-  }
-}
-
-@media (min-width: 1441px) and (max-width: 1550px) {
-  .vector {
-    top: 385px !important;
-  }
-}
 
 @media (min-width: 1380px) and (max-width: 1439px) {
   .hero-main-text h1 {
