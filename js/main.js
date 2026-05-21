@@ -69,7 +69,6 @@ function renderAll() {
   renderContact();
   renderFooter();
   initMobileMenu();
-  initLanguageSwitch();
   initContactForm();
   updateTestimonial(currentTestimonialIndex);
 
@@ -81,30 +80,124 @@ function renderAll() {
   window.scrollTo(0, scrollY);
 }
 
-function initLanguageSwitch() {
-  const languageSwitch = document.querySelector('.language-switch');
-  if (!languageSwitch) return;
-
-  languageSwitch.addEventListener('click', (e) => {
-    if (e.target.tagName !== 'BUTTON') return;
-
-    const lang = e.target.textContent.trim();
-    if (lang === currentLanguage) return;
-    currentLanguage = lang;
-
-    renderAll();
-  });
-}
+document.addEventListener('languageChanged', () => {
+  renderAll();
+});
 
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (form) {
+    const nameInput = document.getElementById('contact-name');
+    const emailInput = document.getElementById('contact-email');
+    const messageInput = document.getElementById('contact-message');
+    const privacyInput = document.getElementById('privacy');
+    const successMsg = document.getElementById('success-message');
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    function validateField(inputElement, errorId, iconId, validatorFn) {
+      if (!inputElement) return false;
+      const val = inputElement.value.trim();
+      const isValid = validatorFn(val);
+
+      const errorEl = document.getElementById(errorId);
+      const iconEl = document.getElementById(iconId);
+
+      if (isValid) {
+        inputElement.classList.remove('error');
+        inputElement.classList.add('success');
+        if (errorEl) errorEl.style.display = 'none';
+        if (iconEl) {
+          iconEl.src = 'assets/images/green-frame.svg';
+          iconEl.style.display = 'block';
+        }
+      } else {
+        inputElement.classList.remove('success');
+        inputElement.classList.add('error');
+        if (errorEl) errorEl.style.display = 'block';
+        if (iconEl) {
+          iconEl.src = 'assets/images/red-frame.svg';
+          iconEl.style.display = 'block';
+        }
+      }
+      return isValid;
+    }
+
+    function checkAllFields() {
+      const isNameValid = nameInput && nameInput.value.trim().length > 0;
+      const isEmailValid = emailInput && emailRegex.test(emailInput.value.trim());
+      const isMessageValid = messageInput && messageInput.value.trim().length > 0;
+      const isPrivacyValid = privacyInput && privacyInput.checked;
+
+      const submitBtn = document.getElementById('submit-btn');
+      if (submitBtn) {
+        if (isNameValid && isEmailValid && isMessageValid && isPrivacyValid) {
+          submitBtn.classList.add('valid');
+        } else {
+          submitBtn.classList.remove('valid');
+        }
+      }
+    }
+
+    // Real-time validation
+    if (nameInput) {
+      nameInput.addEventListener('input', () => {
+        validateField(nameInput, 'error-name', 'icon-name', val => val.length > 0);
+        checkAllFields();
+      });
+    }
+    if (emailInput) {
+      emailInput.addEventListener('input', () => {
+        validateField(emailInput, 'error-email', 'icon-email', val => emailRegex.test(val));
+        checkAllFields();
+      });
+    }
+    if (messageInput) {
+      messageInput.addEventListener('input', () => {
+        validateField(messageInput, 'error-message', 'icon-message', val => val.length > 0);
+        checkAllFields();
+      });
+    }
+    if (privacyInput) {
+      privacyInput.addEventListener('change', () => {
+        const errorEl = document.getElementById('error-privacy');
+        const checkboxImg = document.getElementById('privacy-checkbox-img');
+        if (privacyInput.checked) {
+          if (errorEl) errorEl.style.display = 'none';
+          if (checkboxImg) checkboxImg.src = 'assets/images/check-button-checked.svg';
+        } else {
+          if (errorEl) errorEl.style.display = 'block';
+          if (checkboxImg) checkboxImg.src = 'assets/images/check-button.svg';
+        }
+        checkAllFields();
+      });
+    }
+
+    // Initial check
+    checkAllFields();
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      if (successMsg) successMsg.style.display = 'none';
 
-      const name = document.getElementById('contact-name').value;
-      const email = document.getElementById('contact-email').value;
-      const message = document.getElementById('contact-message').value;
+      let isValid = true;
+
+      if (!validateField(nameInput, 'error-name', 'icon-name', val => val.length > 0)) isValid = false;
+      if (!validateField(emailInput, 'error-email', 'icon-email', val => emailRegex.test(val))) isValid = false;
+      if (!validateField(messageInput, 'error-message', 'icon-message', val => val.length > 0)) isValid = false;
+
+      const privacy = privacyInput ? privacyInput.checked : false;
+      if (!privacy) {
+        const errorEl = document.getElementById('error-privacy');
+        if (errorEl) errorEl.style.display = 'block';
+        isValid = false;
+      }
+
+      if (!isValid) return;
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const message = messageInput.value.trim();
 
       try {
         const response = await fetch('contact_form_mail.php', {
@@ -116,56 +209,38 @@ function initContactForm() {
         });
 
         if (response.ok) {
-          alert(currentLanguage === 'DE' ? 'Nachricht erfolgreich gesendet!' : 'Message sent successfully!');
+          if (successMsg) {
+            successMsg.textContent = currentLanguage === 'DE' ? 'Nachricht erfolgreich gesendet!' : 'Message sent successfully!';
+            successMsg.style.color = '#22c55e';
+            successMsg.style.display = 'block';
+          }
           form.reset();
+          // Clear visual states
+          [nameInput, emailInput, messageInput].forEach(el => {
+            el.classList.remove('success', 'error');
+          });
+          document.querySelectorAll('.validation-icon').forEach(icon => icon.style.display = 'none');
+          const checkboxImg = document.getElementById('privacy-checkbox-img');
+          if (checkboxImg) checkboxImg.src = 'assets/images/check-button.svg';
+          checkAllFields();
         } else {
-          alert(currentLanguage === 'DE' ? 'Fehler beim Senden der Nachricht.' : 'Error sending message.');
+          if (successMsg) {
+            successMsg.textContent = currentLanguage === 'DE' ? 'Fehler beim Senden der Nachricht.' : 'Error sending message.';
+            successMsg.style.color = '#cb0101';
+            successMsg.style.display = 'block';
+          }
         }
       } catch (error) {
         console.error('Error:', error);
-        alert(currentLanguage === 'DE' ? 'Ein Fehler ist aufgetreten.' : 'An error occurred.');
+        if (successMsg) {
+          successMsg.textContent = currentLanguage === 'DE' ? 'Ein Fehler ist aufgetreten.' : 'An error occurred.';
+          successMsg.style.color = '#cb0101';
+          successMsg.style.display = 'block';
+        }
       }
     });
   }
 }
-
-const testimonials = {
-  EN: [
-    {
-      text: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
-      author: "V. Schuster - Team Partner",
-      image: "assets/images/profile.png"
-    },
-    {
-      text: "Jakob's attention to detail and problem-solving skills are outstanding. He delivers high-quality code and is a pleasure to work with.",
-      author: "M. Bauer - Project Lead",
-      image: "assets/images/profile.png"
-    },
-    {
-      text: "His expertise in frontend development helped us achieve our goals faster. Great communication and a true team player.",
-      author: "S. Klein - Colleague",
-      image: "assets/images/profile.png"
-    }
-  ],
-
-  DE: [
-    {
-      text: "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
-      author: "V. Schuster - Teamkollege",
-      image: "assets/images/profile.png"
-    },
-    {
-      text: "Jakobs Liebe zum Detail und seine Problemlösungsfähigkeiten sind herausragend. Er liefert qualitativ hochwertigen Code und es ist eine Freude, mit ihm zu arbeiten.",
-      author: "M. Bauer - Projektleiter",
-      image: "assets/images/profile.png"
-    },
-    {
-      text: "Seine Expertise in der Frontend-Entwicklung hat uns geholfen, unsere Ziele schneller zu erreichen. Großartige Kommunikation und ein echter Teamplayer.",
-      author: "S. Klein - Kollege",
-      image: "assets/images/profile.png"
-    }
-  ]
-};
 
 let currentTestimonialIndex = 0;
 

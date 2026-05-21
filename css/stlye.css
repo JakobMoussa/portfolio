@@ -10,6 +10,7 @@
 html {
   background: #131c2f;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -18,21 +19,16 @@ body {
   width: 100%;
   margin: 0 auto;
   overflow-x: hidden;
+  position: relative;
+}
+
+#hero-section, #about-section, #skills-section, #portfolio-section, #contact-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
 }
 
 #about-section {
   z-index: 3;
-  position: relative;
-  overflow-x: hidden;
-}
-
-#skills-section {
-  position: relative;
-  overflow-x: clip;
-}
-
-@media (min-width: 1441px) {
-  html {
-    zoom: calc(100vw / 1440);
-  }
 }

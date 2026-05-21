@@ -2,7 +2,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
   position: relative;
 }
 
@@ -256,7 +255,7 @@ h3 {
 .testimonial-green-shadow {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: calc(50% - 50vw);
   width: 400px;
   height: 600px;
   z-index: 0;

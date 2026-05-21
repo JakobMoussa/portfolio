@@ -1,96 +1,3 @@
-let currentLanguage = 'EN';
-
-const translations = {
-  EN: {
-    navAbout: "About me",
-    navSkills: "Skills",
-    navPortfolio: "Portfolio",
-    heroAm: "I am",
-    heroRole: "FRONTEND DEVELOPER",
-    heroBtn: "Let’s talk!",
-    heroScroll: "Scroll down",
-
-    aboutMeTitle: "About me",
-    aboutMeText: "I am interested in IT and especially in programming. Coding is fun for me because I can use it to solve problems and implement my own ideas. I improve myself through practice, tutorials, and personal projects.",
-    aboutLocText: "I am currently based in Germany and open to remote work as well as relocation.",
-    aboutLearnText: "I am open to new things and love to learn constantly. New technologies motivate me to develop my skills further and continuously improve myself.",
-    aboutSolveText: "My approach to problem-solving is based on analytical thinking, creativity, and perseverance. I learn from every challenge and look for the most efficient and elegant solutions possible. Collaboration is also important to me, to incorporate different perspectives.",
-
-    skillsSpecial: "I have a special interest in learning",
-    skillsTitle: "My Skills",
-    skillsTxt1: "As a frontend developer, I have already worked with<br>modern web technologies and frameworks.",
-    skillsTxt2_1: "Looking for ",
-    skillsTxt2_2: "another skill?",
-    skillsTxt3: "I am passionate about constantly expanding my knowledge<br>and using modern tools in my projects.",
-    skillsBtn: "Get in touch",
-
-    portfolioTitle: "Portfolio",
-    portfolioDesc: "Explore a selection of my work here - Interact with projects to see my skills in action.",
-    joinDesc: "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
-    liveTest: "Live test",
-    sharkieDesc: "A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.",
-    crmDesc: "A very simple customer relationship management system working with CRUD functionality.",
-    pokeDesc: "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
-    daDesc: "This app is a Slack clone app. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
-
-    contactTitle: "Contact",
-    contactProb: "Got a problem to solve?",
-    contactDesc1: "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
-    contactDesc2_1: "Need a Frontend developer? ",
-    contactDesc2_2: "Contact me!",
-    placeholderName: "Your name",
-    placeholderEmail: "Your email",
-    placeholderMsg: "Your message",
-    privacyText: "I've read the ",
-    privacyLink: "privacy policy",
-    privacyTextEnd: " and agree to the processing of my data.",
-    sendBtn: "Send message :)",
-  },
-  DE: {
-    navAbout: "Über mich",
-    navSkills: "Fähigkeiten",
-    navPortfolio: "Portfolio",
-    heroBtn: "Lass uns reden!",
-    heroScroll: "Scroll down",
-
-    aboutMeTitle: "Über mich",
-    aboutMeText: "Ich interessiere mich für IT und besonders für Programmierung. Coding macht mir Spaß, weil ich damit Probleme lösen und eigene Ideen umsetzen kann. Ich verbessere mich durch Übung, Tutorials und eigene Projekte.",
-    aboutLocText: "Ich bin derzeit in Deutschland ansässig und offen für Remote-Arbeit sowie einen Umzug.",
-    aboutLearnText: "Ich bin offen für Neues und lerne gerne ständig dazu. Neue Technologien motivieren mich, meine Fähigkeiten weiterzuentwickeln und mich kontinuierlich zu verbessern.",
-    aboutSolveText: "Mein Problemlösungsansatz basiert auf analytischem Denken, Kreativität und Ausdauer. Ich lerne aus jeder Herausforderung und suche nach möglichst effizienten und eleganten Lösungen. Dabei ist mir auch Zusammenarbeit wichtig, um unterschiedliche Perspektiven einzubeziehen.",
-
-    skillsSpecial: "Mein besonderes Interesse gilt dem Lernen",
-    skillsTitle: "Fähigkeiten",
-    skillsTxt1: "Als Frontend-Entwickler habe ich bereits mit<br>modernen Webtechnologien und Frameworks gearbeitet.",
-    skillsTxt2_1: "Suchst du nach ",
-    skillsTxt2_2: "einer anderen Fähigkeit?",
-    skillsTxt3: "Es begeistert mich, mein Wissen ständig zu erweitern<br>und moderne Tools in meinen Projekten einzusetzen.",
-    skillsBtn: "Kontakt aufnehmen",
-
-    portfolioTitle: "Portfolio",
-    portfolioDesc: "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
-    joinDesc: "Ein vom Kanban-System inspirierter Task-Manager. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
-    liveTest: "Live-Test",
-    sharkieDesc: "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Sharkie, Münzen und Giftflaschen zu finden, um gegen den Schwertwal zu kämpfen.",
-    crmDesc: "Ein sehr einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.",
-    pokeDesc: "Basierend auf der PokeAPI, eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
-    daDesc: "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit einer intuitiven Benutzeroberfläche, Echtzeit-Nachrichten und einer robusten Kanalorganisation.",
-
-    contactTitle: "Kontakt",
-    contactProb: "Hast du ein Problem zu lösen?",
-    contactDesc1: "Ermutige Leute, dich zu kontaktieren und beschreibe, an welcher Rolle du interessiert bist. Zeige, dass du ihren Projekten durch deine Arbeit einen Mehrwert bieten wirst.",
-    contactDesc2_1: "Brauchst du einen Frontend-Entwickler? ",
-    contactDesc2_2: "Kontaktiere mich!",
-    placeholderName: "Dein Name",
-    placeholderEmail: "Deine E-Mail",
-    placeholderMsg: "Deine Nachricht",
-    privacyText: "Ich habe die ",
-    privacyLink: "Datenschutzrichtlinie",
-    privacyTextEnd: " gelesen und stimme der Verarbeitung meiner Daten zu.",
-    sendBtn: "Nachricht senden :)",
-
-  }
-};
 
 function HeroTemplate() {
   const t = translations[currentLanguage];
@@ -141,9 +48,9 @@ function HeroTemplate() {
           <button class="Hero-button" onclick="window.location.href='#contact-section'">${t.heroBtn}</button>
         </div>
 
+        <img class="vector" src="assets/images/Vector (1).png">
       </div>
 
-      <img class="vector" src="assets/images/Vector (1).png">
         <span class="scroll-txt">${t.heroScroll}
         <img  class="arrow-icon" src="assets/images/icons/arrow.svg"/>
         </span>
@@ -436,23 +343,40 @@ function renderContactTemplate() {
 
     <!-- Rechts -->
     <div class="contact-right">
-      <form id="contact-form">
+        <form id="contact-form" novalidate>
 
-        <input type="text" id="contact-name" placeholder="${t.placeholderName}" required>
-        <input type="email" id="contact-email" placeholder="${t.placeholderEmail}" required>
+          <div class="input-wrapper">
+            <input type="text" id="contact-name" placeholder="${t.placeholderName}">
+            <img class="validation-icon" id="icon-name" src="" alt="validation icon">
+          </div>
+          <span class="error-msg" id="error-name" style="display:none; color:#cb0101; font-size:12px; margin-top:-15px;">${t.errorName}</span>
+          
+          <div class="input-wrapper">
+            <input type="text" id="contact-email" placeholder="${t.placeholderEmail}">
+            <img class="validation-icon" id="icon-email" src="" alt="validation icon">
+          </div>
+          <span class="error-msg" id="error-email" style="display:none; color:#cb0101; font-size:12px; margin-top:-15px;">${t.errorEmail}</span>
 
-        <textarea id="contact-message" placeholder="${t.placeholderMsg}" rows="5" required></textarea>
+          <div class="input-wrapper textarea-wrapper">
+            <textarea id="contact-message" placeholder="${t.placeholderMsg}" rows="5"></textarea>
+            <img class="validation-icon" id="icon-message" src="" alt="validation icon">
+          </div>
+          <span class="error-msg" id="error-message" style="display:none; color:#cb0101; font-size:12px; margin-top:-15px;">${t.errorMessage}</span>
 
-        <div class="checkbox">
-          <input type="checkbox" id="privacy" required>
-          <label for="privacy">
-            ${t.privacyText}<a href="#">${t.privacyLink}</a>${t.privacyTextEnd}
-          </label>
-        </div>
+          <div class="checkbox">
+            <input type="checkbox" id="privacy" style="display:none;">
+            <label for="privacy" style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+              <img src="assets/images/check-button.svg" class="custom-checkbox" id="privacy-checkbox-img" alt="checkbox" style="width:24px; height:24px;">
+              <span>${t.privacyText}<a href="#">${t.privacyLink}</a>${t.privacyTextEnd}</span>
+            </label>
+          </div>
+          <span class="error-msg" id="error-privacy" style="display:none; color:#cb0101; font-size:12px; margin-top:-10px;">${t.errorPrivacy}</span>
 
-        <button type="submit">${t.sendBtn}</button>
+          <button type="submit" id="submit-btn">${t.sendBtn}</button>
+          
+          <span class="success-msg" id="success-message" style="display:none; color:#22c55e; font-size:14px; text-align:center; margin-top:10px;"></span>
 
-      </form>
+        </form>
     </div>
 
   </div>

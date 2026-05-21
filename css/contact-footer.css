@@ -17,6 +17,17 @@
   width: 535px;
   height: 3px;
   background: #a855f7;
+  position: relative;
+}
+
+.contact-headline-container .line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100%;
+  background: inherit;
 }
 
 .contact-headline {
@@ -95,9 +106,49 @@ input {
 
 .contact-right input:focus,
 .contact-right textarea:focus {
-  border-color: #a855f7;
-  box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+  border-color: #1edae6 !important;
+  box-shadow: 0 0 10px rgba(30, 218, 230, 0.4);
 }
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 617px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  width: 100%;
+}
+
+.validation-icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  display: none;
+  pointer-events: none;
+}
+
+.input-wrapper.textarea-wrapper .validation-icon {
+  top: 16px;
+  transform: none;
+}
+
+.contact-right input.success,
+.contact-right textarea.success {
+  border-color: #22c55e !important;
+}
+
+.contact-right input.error,
+.contact-right textarea.error {
+  border-color: #cb0101 !important;
+}
+
 
 .checkbox {
   display: flex;
@@ -120,7 +171,7 @@ input {
   position: absolute;
   height: 500px;
   top: 230px;
-  left: 0;
+  left: calc(50% - 50vw);
   z-index: 0;
 }
 
@@ -128,7 +179,7 @@ input {
   padding: 14px;
   border-radius: 10px;
   border: none;
-  background: #9ca3af;
+  background: #9da3af;
   color: #fff;
   cursor: pointer;
   transition: 0.3s;
@@ -136,7 +187,15 @@ input {
 }
 
 .contact-right button:hover {
-  background: #a855f7;
+  background: #a755f7;
+}
+
+.contact-right button.valid {
+  background: #70e61b !important;
+}
+
+.contact-right button.valid:hover {
+  background: #a755f7 !important;
 }
 
 .go-up-arrow {
