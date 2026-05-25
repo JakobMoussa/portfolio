@@ -24,35 +24,7 @@ function renderFooter() {
   document.getElementById("footer-section").innerHTML = renderFooterTemplate();
 }
 
-function initMobileMenu() {
-  const rightNav = document.querySelector(".right-nav");
-  if (rightNav) {
-    rightNav.addEventListener("click", (e) => {
-      if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON' && !e.target.closest('.language-switch')) {
-        if (document.body.classList.contains("menu-open")) {
-          closeMenu();
-        } else {
-          document.body.classList.add("menu-open");
-        }
-      }
-    });
 
-    const navLinks = rightNav.querySelectorAll("a");
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        closeMenu();
-      });
-    });
-  }
-}
-
-function closeMenu() {
-  document.body.classList.add("menu-closing");
-  setTimeout(() => {
-    document.body.classList.remove("menu-open");
-    document.body.classList.remove("menu-closing");
-  }, 300);
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   renderAll();
@@ -139,7 +111,6 @@ function initContactForm() {
       }
     }
 
-    // Real-time validation
     if (nameInput) {
       nameInput.addEventListener('input', () => {
         validateField(nameInput, 'error-name', 'icon-name', val => val.length > 0);
@@ -215,7 +186,6 @@ function initContactForm() {
             successMsg.style.display = 'block';
           }
           form.reset();
-          // Clear visual states
           [nameInput, emailInput, messageInput].forEach(el => {
             el.classList.remove('success', 'error');
           });

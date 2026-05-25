@@ -10,6 +10,7 @@
 html {
   background: #131c2f;
   scroll-behavior: smooth;
+  scroll-padding-top: 200px;
   overflow-x: hidden;
 }
 
@@ -22,7 +23,11 @@ body {
   position: relative;
 }
 
-#hero-section, #about-section, #skills-section, #portfolio-section, #contact-section {
+#hero-section,
+#about-section,
+#skills-section,
+#portfolio-section,
+#contact-section {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
@@ -31,4 +36,9 @@ body {
 
 #about-section {
   z-index: 3;
+}
+
+.jakob-image {
+  width: 150px;
+  height: 60px;
 }

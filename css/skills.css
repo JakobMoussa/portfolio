@@ -641,6 +641,7 @@
 .txt-2 {
   font-size: 28px;
   margin-bottom: 16px;
+  z-index: 10;
 }
 
 .txt-3 {

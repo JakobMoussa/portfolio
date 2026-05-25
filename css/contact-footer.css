@@ -186,10 +186,6 @@ input {
   max-width: 617px;
 }
 
-.contact-right button:hover {
-  background: #a755f7;
-}
-
 .contact-right button.valid {
   background: #70e61b !important;
 }
@@ -447,7 +443,7 @@ input {
   }
 
   .footer {
-    margin-top: 130px !important;
+    margin-top: 90px !important;
   }
 }
 

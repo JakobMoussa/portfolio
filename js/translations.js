@@ -2,23 +2,21 @@ let currentLanguage = localStorage.getItem('portfolio_lang') || 'EN';
 
 const translations = {
   EN: {
-    // Nav & Hero
     navAbout: "About me",
     navSkills: "Skills",
     navPortfolio: "Portfolio",
+    navContact: "Contact",
     heroAm: "I am",
     heroRole: "FRONTEND DEVELOPER",
     heroBtn: "Let’s talk!",
     heroScroll: "Scroll down",
 
-    // About
     aboutMeTitle: "About me",
     aboutMeText: "I am interested in IT and especially in programming. Coding is fun for me because I can use it to solve problems and implement my own ideas. I improve myself through practice, tutorials, and personal projects.",
     aboutLocText: "I am currently based in Germany and open to remote work as well as relocation.",
     aboutLearnText: "I am open to new things and love to learn constantly. New technologies motivate me to develop my skills further and continuously improve myself.",
     aboutSolveText: "My approach to problem-solving is based on analytical thinking, creativity, and perseverance. I learn from every challenge and look for the most efficient and elegant solutions possible. Collaboration is also important to me, to incorporate different perspectives.",
 
-    // Skills
     skillsSpecial: "I have a special interest in learning",
     skillsTitle: "My Skills",
     skillsTxt1: "As a frontend developer, I have already worked with<br>modern web technologies and frameworks.",
@@ -27,7 +25,6 @@ const translations = {
     skillsTxt3: "I am passionate about constantly expanding my knowledge<br>and using modern tools in my projects.",
     skillsBtn: "Get in touch",
 
-    // Portfolio
     portfolioTitle: "Portfolio",
     portfolioDesc: "Explore a selection of my work here - Interact with projects to see my skills in action.",
     joinDesc: "Task manager inspired by the Kanban system. Create and organize tasks using drag and drop functions, assign users and categories.",
@@ -37,7 +34,6 @@ const translations = {
     pokeDesc: "Based on the PokeAPI a simple library that provides and catalogues pokemon information.",
     daDesc: "This app is a Slack clone app. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.",
 
-    // Contact
     contactTitle: "Contact",
     contactProb: "Got a problem to solve?",
     contactDesc1: "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
@@ -54,8 +50,7 @@ const translations = {
     errorEmail: "Please enter a valid email address",
     errorMessage: "Please enter your message",
     errorPrivacy: "Please accept the privacy policy",
-    
-    // Legal & Footer
+
     legalNoticeLink: "Legal Notice",
     privacyPolicyLink: "Privacy Policy",
     impressumTitle: "Legal Notice",
@@ -70,7 +65,7 @@ const translations = {
       </ul>
       <p>
           <strong class="headline">Represented by</strong><br>
-          Email: jakobmoussa5@gmail.com
+          Email: contact@jakobmoussa.de
       </p>
       <h2 class="headline">Consumer Dispute Resolution</h2>
       <p>
@@ -87,7 +82,7 @@ const translations = {
 
       <h2>Controller</h2>
       <p>Jakob Moussa<br>Rathausstraße 46<br>56203 Höhr-Grenzhausen</p>
-      <p>Email address: <a href="mailto:jakobmoussa5@gmail.com">jakobmoussa5@gmail.com</a></p>
+      <p>Email address: <a href="mailto:contact@jakobmoussa.de">contact@jakobmoussa.de</a></p>
 
       <h2>Overview of Processing</h2>
       <p>The following overview summarizes the types of data processed and the purposes of their processing and refers to the data subjects.</p>
@@ -131,23 +126,21 @@ const translations = {
     `
   },
   DE: {
-    // Nav & Hero
     navAbout: "Über mich",
     navSkills: "Fähigkeiten",
     navPortfolio: "Portfolio",
+    navContact: "Kontakt",
     heroAm: "Ich bin",
     heroRole: "FRONTEND ENTWICKLER",
     heroBtn: "Lass uns reden!",
     heroScroll: "Scroll down",
 
-    // About
     aboutMeTitle: "Über mich",
     aboutMeText: "Ich interessiere mich für IT und besonders für Programmierung. Coding macht mir Spaß, weil ich damit Probleme lösen und eigene Ideen umsetzen kann. Ich verbessere mich durch Übung, Tutorials und eigene Projekte.",
     aboutLocText: "Ich bin derzeit in Deutschland ansässig und offen für Remote-Arbeit sowie einen Umzug.",
     aboutLearnText: "Ich bin offen für Neues und lerne gerne ständig dazu. Neue Technologien motivieren mich, meine Fähigkeiten weiterzuentwickeln und mich kontinuierlich zu verbessern.",
     aboutSolveText: "Mein Problemlösungsansatz basiert auf analytischem Denken, Kreativität und Ausdauer. Ich lerne aus jeder Herausforderung und suche nach möglichst effizienten und eleganten Lösungen. Dabei ist mir auch Zusammenarbeit wichtig, um unterschiedliche Perspektiven einzubeziehen.",
 
-    // Skills
     skillsSpecial: "Mein besonderes Interesse gilt dem Lernen",
     skillsTitle: "Fähigkeiten",
     skillsTxt1: "Als Frontend-Entwickler habe ich bereits mit<br>modernen Webtechnologien und Frameworks gearbeitet.",
@@ -156,7 +149,6 @@ const translations = {
     skillsTxt3: "Es begeistert mich, mein Wissen ständig zu erweitern<br>und moderne Tools in meinen Projekten einzusetzen.",
     skillsBtn: "Kontakt aufnehmen",
 
-    // Portfolio
     portfolioTitle: "Portfolio",
     portfolioDesc: "Entdecke hier eine Auswahl meiner Arbeiten - Interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
     joinDesc: "Ein vom Kanban-System inspirierter Task-Manager. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
@@ -166,7 +158,6 @@ const translations = {
     pokeDesc: "Basierend auf der PokeAPI, eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
     daDesc: "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und Zusammenarbeit mit einer intuitiven Benutzeroberfläche, Echtzeit-Nachrichten und einer robusten Kanalorganisation.",
 
-    // Contact
     contactTitle: "Kontakt",
     contactProb: "Hast du ein Problem zu lösen?",
     contactDesc1: "Ermutige Leute, dich zu kontaktieren und beschreibe, an welcher Rolle du interessiert bist. Zeige, dass du ihren Projekten durch deine Arbeit einen Mehrwert bieten wirst.",
@@ -184,7 +175,6 @@ const translations = {
     errorMessage: "Bitte gib deine Nachricht ein",
     errorPrivacy: "Bitte akzeptiere die Datenschutzrichtlinie",
 
-    // Legal & Footer
     legalNoticeLink: "Impressum",
     privacyPolicyLink: "Datenschutz",
     impressumTitle: "Impressum",
@@ -199,7 +189,7 @@ const translations = {
       </ul>
       <p>
           <strong class="headline">Vertretungsberechtigt</strong><br>
-          E-Mail: jakobmoussa5@gmail.com
+          E-Mail: contact@jakobmoussa.de
       </p>
       <h2 class="headline">Verbraucherstreitbeilegung</h2>
       <p>
@@ -216,7 +206,7 @@ const translations = {
 
       <h2>Verantwortlicher</h2>
       <p>Jakob Moussa<br>Rathausstraße 46<br>56203 Höhr-grenzhausen</p>
-      <p>E-Mail-Adresse: <a href="mailto:jakobmoussa5@gmail.com">jakobmoussa5@gmail.com</a></p>
+      <p>E-Mail-Adresse: <a href="mailto:contact@jakobmoussa.de">contact@jakobmoussa.de</a></p>
 
       <h2>Übersicht der Verarbeitungen</h2>
       <p>Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.</p>
@@ -298,21 +288,17 @@ const testimonials = {
   ]
 };
 
-// Global function to change language and trigger an event
 function switchLanguage(lang) {
   if (lang === currentLanguage) return;
   currentLanguage = lang;
   localStorage.setItem('portfolio_lang', lang);
-  
-  // Dispatch a custom event so other scripts can re-render
+
   document.dispatchEvent(new Event('languageChanged'));
 }
 
-// Function to translate static elements using data-translate attribute
 function updateStaticTranslations() {
   const t = translations[currentLanguage];
-  
-  // Update elements with data-translate attribute
+
   document.querySelectorAll('[data-translate]').forEach(el => {
     const key = el.getAttribute('data-translate');
     if (t[key]) {
@@ -320,7 +306,6 @@ function updateStaticTranslations() {
     }
   });
 
-  // Update active state of language switch buttons
   document.querySelectorAll('.language-switch button').forEach(btn => {
     if (btn.textContent.trim() === currentLanguage) {
       btn.classList.add('active');
@@ -330,19 +315,47 @@ function updateStaticTranslations() {
   });
 }
 
-// Automatically bind click events to all language switchers
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.language-switch').forEach(switcher => {
-    switcher.addEventListener('click', (e) => {
-      if (e.target.tagName === 'BUTTON') {
-        switchLanguage(e.target.textContent.trim());
+function initMobileMenu() {
+  const rightNav = document.querySelector(".right-nav");
+  if (rightNav && !rightNav.dataset.menuInit) {
+    rightNav.dataset.menuInit = "true";
+    rightNav.addEventListener("click", (e) => {
+      if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON' && !e.target.closest('.language-switch')) {
+        if (document.body.classList.contains("menu-open")) {
+          closeMenu();
+        } else {
+          document.body.classList.add("menu-open");
+        }
       }
     });
+
+    const navLinks = rightNav.querySelectorAll("a");
+    navLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        closeMenu();
+      });
+    });
+  }
+}
+
+function closeMenu() {
+  document.body.classList.add("menu-closing");
+  setTimeout(() => {
+    document.body.classList.remove("menu-open");
+    document.body.classList.remove("menu-closing");
+  }, 300);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('click', (e) => {
+    const btn = e.target.closest('.language-switch button');
+    if (btn) {
+      switchLanguage(btn.textContent.trim());
+    }
   });
-  
-  // Apply static translations initially
+
   updateStaticTranslations();
+  initMobileMenu();
 });
 
-// Update static translations whenever language changes
 document.addEventListener('languageChanged', updateStaticTranslations);

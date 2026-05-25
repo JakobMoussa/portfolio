@@ -15,6 +15,7 @@ function HeroTemplate() {
               <a href="#about-section">${t.navAbout}</a>
               <a href="#skills-section">${t.navSkills}</a>
               <a href="#portfolio-section">${t.navPortfolio}</a>
+              <a href="#contact-section">${t.navContact}</a>
             </nav>
 
             <div class="language-switch">
@@ -71,12 +72,12 @@ function renderAboutTemplate() {
 
         <div class="social-links">
           <a href="https://github.com/JakobMoussa" target="_blank" rel="noopener noreferrer"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
-          <a href="mailto:jakobmoussa@icloud.com"><img src="assets/images/icons/Email button.svg" alt="Mail"></a>
+          <a href="mailto:contact@jakobmoussa.de"><img src="assets/images/icons/Email button.svg" alt="Mail"></a>
           <a href="https://www.linkedin.com/in/jakob-moussa" target="_blank" rel="noopener noreferrer"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
         </div>
 
         <div class="email">
-          <a href="mailto:jakobmoussa@gmail.com">jakobmoussa@icloud.com</a>
+          <a href="mailto:contact@jakobmoussa.de">contact@jakobmoussa.de</a>
         </div>
       </div>
 
@@ -398,7 +399,7 @@ function renderFooterTemplate() {
             <span>Jakob</span>
           </div>
           <p class="footer-legal">
-            <a class="impressum" href="impressum.html">Legal Notice</a> | <a class="datenschutz" href="datenschutz.html">Privacy Policy</a>
+            <a class="impressum" href="impressum.html">${t.legalNoticeLink}</a> | <a class="datenschutz" href="datenschutz.html">${t.privacyPolicyLink}</a>
           </p>
         </div>
 
