@@ -347,6 +347,10 @@
     font-size: 28px !important;
   }
 
+  .skills-txt {
+    max-width: 80% !important;
+  }
+
   .icon {
     width: 50px !important;
     height: 50px !important;
@@ -391,7 +395,7 @@
   }
 
   .skills-box {
-    gap: 0px 0px !important;
+    gap: 0px 36px !important;
   }
 
   .green-shadow-2 {

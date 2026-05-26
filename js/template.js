@@ -410,7 +410,7 @@ function renderFooterTemplate() {
         <div class="footer-right">
           <div class="footer-social">
             <a href="https://github.com/JakobMoussa" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/images/icons/github.svg" alt="GitHub"></a>
-            <a href="#" aria-label="Email"><img src="assets/images/icons/Email button.svg" alt="Email"></a>
+            <a href="mailto:contact@jakobmoussa.de" aria-label="Email"><img src="assets/images/icons/Email button.svg" alt="Email"></a>
             <a href="https://www.linkedin.com/in/jakob-moussa/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/images/icons/Linkedin button.svg" alt="LinkedIn"></a>
           </div>
         </div>

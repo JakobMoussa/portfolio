@@ -195,7 +195,17 @@ input {
 }
 
 .go-up-arrow {
-  display: none;
+  display: block;
+  position: absolute;
+  right: 80px;
+  bottom: -100px;
+  width: 50px;
+  z-index: 10;
+  transition: transform 0.2s ease;
+}
+
+.go-up-arrow:hover {
+  transform: scale(1.1);
 }
 
 .footer {

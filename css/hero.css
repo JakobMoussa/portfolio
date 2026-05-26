@@ -54,6 +54,10 @@
   text-decoration-color: #8a3ffc;
 }
 
+.nav a[href*="contact"] {
+  display: none;
+}
+
 .language-switch {
   display: flex;
   align-items: center;
@@ -591,6 +595,10 @@
     display: none !important;
   }
 
+  .nav a[href*="contact"] {
+    display: flex;
+  }
+
   .right-nav {
     width: 30px;
     height: 20px;
@@ -784,6 +792,11 @@
     color: white;
     text-decoration: none;
   }
+
+  /* body.menu-open .nav a[href*="contact"],
+  body.menu-closing .nav a[href*="contact"] {
+    display: block;
+  } */
 
   body.menu-open .language-switch,
   body.menu-closing .language-switch {
