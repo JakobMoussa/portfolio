@@ -20,6 +20,7 @@ function HeroTemplate() {
 
             <div class="language-switch">
               <button class="${currentLanguage === 'DE' ? 'active' : ''}">DE</button>
+              <span class="separator">/</span>
               <button class="${currentLanguage === 'EN' ? 'active' : ''}">EN</button>
             </div>
           </div>
@@ -37,12 +38,12 @@ function HeroTemplate() {
         <div class="hero-text">
          <div class="hero-title-group">
             <div class="hero-side-text">
-              <span>I am</span>
+              <span>${t.heroAm}</span>
             </div>
 
             <div class="hero-main-text">
               <h1>Jakob Moussa</h1>
-              <h2>FRONTEND DEVELOPER</h2>
+              <h2>${t.heroRole}</h2>
             </div>
           </div>
 
@@ -56,15 +57,6 @@ function HeroTemplate() {
         <img  class="arrow-icon" src="assets/images/icons/arrow.svg"/>
         </span>
       <img class="purple-shadow-2" src="assets/images/Purple shadow 2 (1).png" />
-
-    </section>
-  `;
-}
-
-function renderAboutTemplate() {
-  const t = translations[currentLanguage];
-  return `
-    <section class="about-me">
 
       <!-- Top Bar -->
       <div class="about-topbar">
@@ -80,6 +72,15 @@ function renderAboutTemplate() {
           <a href="mailto:contact@jakobmoussa.de">contact@jakobmoussa.de</a>
         </div>
       </div>
+
+    </section>
+  `;
+}
+
+function renderAboutTemplate() {
+  const t = translations[currentLanguage];
+  return `
+    <section class="about-me">
 
       <!-- Content -->
       <div class="about-content">
@@ -215,7 +216,7 @@ function renderPortfolioTemplate() {
                 <p class="p-txt">${t.joinDesc}</p>
                 <div class="project-actions">
                   <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/6-join/index.html" target="_blank" rel="noopener noreferrer" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="https://github.com/JakobMoussa/Join" target="_blank" rel="noopener noreferrer" class="project-btn">Github</a></button>
+                  <button class="github-btn"><a href="https://github.com/JakobMoussa/Join-Project.git" target="_blank" rel="noopener noreferrer" class="project-btn">Github</a></button>
                 </div>
               </div>
             </article>
@@ -234,24 +235,8 @@ function renderPortfolioTemplate() {
                 <img class="sharkie-image" src="assets/images/sharkie.png">
               </div>
             </article>
-
+            
             <article class="portfolio-project">
-              <img class="crm-shadow" src="assets/images/icons/Purple shadow 3.png" alt="">
-              <div class="project-media crm-media">
-                <img class="crm-photo" src="assets/images/Simple CRM photo.png">
-              </div>
-              <div class="project-content">
-                <h2>Simple CRM</h2>
-                <h3>Angular | Firebase</h3>
-                <p class="p-txt">${t.crmDesc}</p>
-                <div class="project-actions">
-                  <button class="live-btn"><a href="#" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
-                </div>
-              </div>
-            </article>
-
-            <article class="portfolio-project reverse">
               <div class="project-content">
                 <h2>Pokedex</h2>
                 <h3>JavaScript | HTML | CSS | Api</h3>
@@ -266,20 +251,6 @@ function renderPortfolioTemplate() {
               </div>
             </article>
 
-            <article class="portfolio-project">
-              <div class="project-media">
-                <img src="assets/images/DA Bubble.png">
-              </div>
-              <div class="project-content">
-                <h2>DA Bubble</h2>
-                <h3>Angular | TypeScript | Firebase</h3>
-                <p class="p-txt">${t.daDesc}</p>
-                <div class="project-actions">
-                  <button class="live-btn"><a href="#" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="#" class="project-btn">Github</a></button>
-                </div>
-              </div>
-            </article>
           </div>
 
           <section class="portfolio-reference">
@@ -419,3 +390,4 @@ function renderFooterTemplate() {
     </footer>
   `
 }
+

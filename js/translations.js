@@ -254,7 +254,7 @@ const translations = {
 const testimonials = {
   EN: [
     {
-      text: "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+      text: "Jakob really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
       author: "V. Schuster - Team Partner",
       image: "assets/images/profile.png"
     },
@@ -271,7 +271,7 @@ const testimonials = {
   ],
   DE: [
     {
-      text: "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+      text: "Jakob hat das Team mit seiner großartigen Organisation und klaren Kommunikation wirklich zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
       author: "V. Schuster - Teamkollege",
       image: "assets/images/profile.png"
     },
@@ -292,49 +292,54 @@ function switchLanguage(lang) {
   if (lang === currentLanguage) return;
   currentLanguage = lang;
   localStorage.setItem('portfolio_lang', lang);
-
   document.dispatchEvent(new Event('languageChanged'));
 }
 
 function updateStaticTranslations() {
-  const t = translations[currentLanguage];
+  updateTranslationElements();
+  updateLanguageButtons();
+}
 
+function updateTranslationElements() {
+  const t = translations[currentLanguage];
   document.querySelectorAll('[data-translate]').forEach(el => {
     const key = el.getAttribute('data-translate');
-    if (t[key]) {
-      el.innerHTML = t[key];
-    }
+    if (t[key]) el.innerHTML = t[key];
   });
+}
 
+function updateLanguageButtons() {
   document.querySelectorAll('.language-switch button').forEach(btn => {
-    if (btn.textContent.trim() === currentLanguage) {
-      btn.classList.add('active');
-    } else {
-      btn.classList.remove('active');
-    }
+    const isActive = btn.textContent.trim() === currentLanguage;
+    btn.classList.toggle('active', isActive);
   });
 }
 
 function initMobileMenu() {
   const rightNav = document.querySelector(".right-nav");
-  if (rightNav && !rightNav.dataset.menuInit) {
-    rightNav.dataset.menuInit = "true";
-    rightNav.addEventListener("click", (e) => {
-      if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON' && !e.target.closest('.language-switch')) {
-        if (document.body.classList.contains("menu-open")) {
-          closeMenu();
-        } else {
-          document.body.classList.add("menu-open");
-        }
-      }
-    });
+  if (!rightNav || rightNav.dataset.menuInit) return;
 
-    const navLinks = rightNav.querySelectorAll("a");
-    navLinks.forEach(link => {
-      link.addEventListener("click", () => {
-        closeMenu();
-      });
-    });
+  rightNav.dataset.menuInit = "true";
+  rightNav.addEventListener("click", handleMenuClick);
+
+  const navLinks = rightNav.querySelectorAll("a");
+  navLinks.forEach(link => link.addEventListener("click", closeMenu));
+}
+
+function handleMenuClick(e) {
+  const isLinkOrBtn = e.target.tagName === 'A' || e.target.tagName === 'BUTTON';
+  const isLangSwitch = e.target.closest('.language-switch');
+
+  if (!isLinkOrBtn && !isLangSwitch) {
+    toggleMenu();
+  }
+}
+
+function toggleMenu() {
+  if (document.body.classList.contains("menu-open")) {
+    closeMenu();
+  } else {
+    document.body.classList.add("menu-open");
   }
 }
 
@@ -347,15 +352,14 @@ function closeMenu() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  document.addEventListener('click', (e) => {
-    const btn = e.target.closest('.language-switch button');
-    if (btn) {
-      switchLanguage(btn.textContent.trim());
-    }
-  });
-
+  document.addEventListener('click', handleGlobalClick);
   updateStaticTranslations();
   initMobileMenu();
 });
+
+function handleGlobalClick(e) {
+  const btn = e.target.closest('.language-switch button');
+  if (btn) switchLanguage(btn.textContent.trim());
+}
 
 document.addEventListener('languageChanged', updateStaticTranslations);

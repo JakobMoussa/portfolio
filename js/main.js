@@ -1,3 +1,5 @@
+const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+let currentTestimonialIndex = 0;
 
 function renderHero() {
   document.getElementById("hero-section").innerHTML = HeroTemplate();
@@ -24,201 +26,226 @@ function renderFooter() {
   document.getElementById("footer-section").innerHTML = renderFooterTemplate();
 }
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  renderAll();
-});
+document.addEventListener("DOMContentLoaded", renderAll);
 
 function renderAll() {
   const scrollY = window.scrollY;
   const wasMenuOpen = document.body.classList.contains("menu-open");
 
+  renderSections();
+  initInteractions();
+  restoreMenuState(wasMenuOpen);
+
+  window.scrollTo(0, scrollY);
+}
+
+function renderSections() {
   renderHero();
   renderAbout();
   renderSkills();
   renderPortfolio();
   renderContact();
   renderFooter();
+}
+
+function initInteractions() {
   initMobileMenu();
   initContactForm();
   updateTestimonial(currentTestimonialIndex);
+}
 
+function restoreMenuState(wasMenuOpen) {
   if (wasMenuOpen) {
     const rightNav = document.querySelector(".right-nav");
     if (rightNav) rightNav.style.animation = "none";
   }
-
-  window.scrollTo(0, scrollY);
 }
 
-document.addEventListener('languageChanged', () => {
-  renderAll();
-});
+document.addEventListener('languageChanged', renderAll);
 
 function initContactForm() {
   const form = document.getElementById('contact-form');
-  if (form) {
-    const nameInput = document.getElementById('contact-name');
-    const emailInput = document.getElementById('contact-email');
-    const messageInput = document.getElementById('contact-message');
-    const privacyInput = document.getElementById('privacy');
-    const successMsg = document.getElementById('success-message');
+  if (!form) return;
+  
+  bindContactInputEvents();
+  checkAllFields();
+  
+  form.addEventListener('submit', handleContactSubmit);
+}
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+function validateField(inputElement, errorId, iconId, validatorFn) {
+  if (!inputElement) return false;
+  const isValid = validatorFn(inputElement.value.trim());
+  const errorEl = document.getElementById(errorId);
+  const iconEl = document.getElementById(iconId);
 
-    function validateField(inputElement, errorId, iconId, validatorFn) {
-      if (!inputElement) return false;
-      const val = inputElement.value.trim();
-      const isValid = validatorFn(val);
+  updateValidationUI(inputElement, errorEl, iconEl, isValid);
+  return isValid;
+}
 
-      const errorEl = document.getElementById(errorId);
-      const iconEl = document.getElementById(iconId);
+function updateValidationUI(input, errorEl, iconEl, isValid) {
+  input.classList.remove(isValid ? 'error' : 'success');
+  input.classList.add(isValid ? 'success' : 'error');
+  
+  if (errorEl) errorEl.style.display = isValid ? 'none' : 'block';
+  if (iconEl) {
+    iconEl.src = isValid ? 'assets/images/green-frame.svg' : 'assets/images/red-frame.svg';
+    iconEl.style.display = 'block';
+  }
+}
 
-      if (isValid) {
-        inputElement.classList.remove('error');
-        inputElement.classList.add('success');
-        if (errorEl) errorEl.style.display = 'none';
-        if (iconEl) {
-          iconEl.src = 'assets/images/green-frame.svg';
-          iconEl.style.display = 'block';
-        }
-      } else {
-        inputElement.classList.remove('success');
-        inputElement.classList.add('error');
-        if (errorEl) errorEl.style.display = 'block';
-        if (iconEl) {
-          iconEl.src = 'assets/images/red-frame.svg';
-          iconEl.style.display = 'block';
-        }
-      }
-      return isValid;
+function checkAllFields() {
+  const nameInput = document.getElementById('contact-name');
+  const emailInput = document.getElementById('contact-email');
+  const messageInput = document.getElementById('contact-message');
+  const privacyInput = document.getElementById('privacy');
+  
+  const isNameValid = nameInput && nameInput.value.trim().length > 0;
+  const isEmailValid = emailInput && EMAIL_REGEX.test(emailInput.value.trim());
+  const isMessageValid = messageInput && messageInput.value.trim().length > 0;
+  const isPrivacyValid = privacyInput && privacyInput.checked;
+
+  updateSubmitButton(isNameValid && isEmailValid && isMessageValid && isPrivacyValid);
+}
+
+function updateSubmitButton(isValid) {
+  const submitBtn = document.getElementById('submit-btn');
+  if (submitBtn) {
+    if (isValid) {
+      submitBtn.classList.add('valid');
+    } else {
+      submitBtn.classList.remove('valid');
     }
+  }
+}
 
-    function checkAllFields() {
-      const isNameValid = nameInput && nameInput.value.trim().length > 0;
-      const isEmailValid = emailInput && emailRegex.test(emailInput.value.trim());
-      const isMessageValid = messageInput && messageInput.value.trim().length > 0;
-      const isPrivacyValid = privacyInput && privacyInput.checked;
+function bindContactInputEvents() {
+  bindInput('contact-name', 'error-name', 'icon-name', val => val.length > 0);
+  bindInput('contact-email', 'error-email', 'icon-email', val => EMAIL_REGEX.test(val));
+  bindInput('contact-message', 'error-message', 'icon-message', val => val.length > 0);
+  
+  const privacyInput = document.getElementById('privacy');
+  if (privacyInput) privacyInput.addEventListener('change', () => handlePrivacyChange(privacyInput));
+}
 
-      const submitBtn = document.getElementById('submit-btn');
-      if (submitBtn) {
-        if (isNameValid && isEmailValid && isMessageValid && isPrivacyValid) {
-          submitBtn.classList.add('valid');
-        } else {
-          submitBtn.classList.remove('valid');
-        }
-      }
-    }
-
-    if (nameInput) {
-      nameInput.addEventListener('input', () => {
-        validateField(nameInput, 'error-name', 'icon-name', val => val.length > 0);
-        checkAllFields();
-      });
-    }
-    if (emailInput) {
-      emailInput.addEventListener('input', () => {
-        validateField(emailInput, 'error-email', 'icon-email', val => emailRegex.test(val));
-        checkAllFields();
-      });
-    }
-    if (messageInput) {
-      messageInput.addEventListener('input', () => {
-        validateField(messageInput, 'error-message', 'icon-message', val => val.length > 0);
-        checkAllFields();
-      });
-    }
-    if (privacyInput) {
-      privacyInput.addEventListener('change', () => {
-        const errorEl = document.getElementById('error-privacy');
-        const checkboxImg = document.getElementById('privacy-checkbox-img');
-        if (privacyInput.checked) {
-          if (errorEl) errorEl.style.display = 'none';
-          if (checkboxImg) checkboxImg.src = 'assets/images/check-button-checked.svg';
-        } else {
-          if (errorEl) errorEl.style.display = 'block';
-          if (checkboxImg) checkboxImg.src = 'assets/images/check-button.svg';
-        }
-        checkAllFields();
-      });
-    }
-
-    // Initial check
-    checkAllFields();
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (successMsg) successMsg.style.display = 'none';
-
-      let isValid = true;
-
-      if (!validateField(nameInput, 'error-name', 'icon-name', val => val.length > 0)) isValid = false;
-      if (!validateField(emailInput, 'error-email', 'icon-email', val => emailRegex.test(val))) isValid = false;
-      if (!validateField(messageInput, 'error-message', 'icon-message', val => val.length > 0)) isValid = false;
-
-      const privacy = privacyInput ? privacyInput.checked : false;
-      if (!privacy) {
-        const errorEl = document.getElementById('error-privacy');
-        if (errorEl) errorEl.style.display = 'block';
-        isValid = false;
-      }
-
-      if (!isValid) return;
-
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-      const message = messageInput.value.trim();
-
-      try {
-        const response = await fetch('contact_form_mail.php', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ name, email, message })
-        });
-
-        if (response.ok) {
-          if (successMsg) {
-            successMsg.textContent = currentLanguage === 'DE' ? 'Nachricht erfolgreich gesendet!' : 'Message sent successfully!';
-            successMsg.style.color = '#22c55e';
-            successMsg.style.display = 'block';
-          }
-          form.reset();
-          [nameInput, emailInput, messageInput].forEach(el => {
-            el.classList.remove('success', 'error');
-          });
-          document.querySelectorAll('.validation-icon').forEach(icon => icon.style.display = 'none');
-          const checkboxImg = document.getElementById('privacy-checkbox-img');
-          if (checkboxImg) checkboxImg.src = 'assets/images/check-button.svg';
-          checkAllFields();
-        } else {
-          if (successMsg) {
-            successMsg.textContent = currentLanguage === 'DE' ? 'Fehler beim Senden der Nachricht.' : 'Error sending message.';
-            successMsg.style.color = '#cb0101';
-            successMsg.style.display = 'block';
-          }
-        }
-      } catch (error) {
-        console.error('Error:', error);
-        if (successMsg) {
-          successMsg.textContent = currentLanguage === 'DE' ? 'Ein Fehler ist aufgetreten.' : 'An error occurred.';
-          successMsg.style.color = '#cb0101';
-          successMsg.style.display = 'block';
-        }
-      }
+function bindInput(inputId, errorId, iconId, validatorFn) {
+  const input = document.getElementById(inputId);
+  if (input) {
+    input.addEventListener('input', () => {
+      validateField(input, errorId, iconId, validatorFn);
+      checkAllFields();
     });
   }
 }
 
-let currentTestimonialIndex = 0;
+function handlePrivacyChange(privacyInput) {
+  const errorEl = document.getElementById('error-privacy');
+  const checkboxImg = document.getElementById('privacy-checkbox-img');
+  
+  if (errorEl) errorEl.style.display = privacyInput.checked ? 'none' : 'block';
+  if (checkboxImg) {
+    checkboxImg.src = privacyInput.checked ? 'assets/images/check-button-checked.svg' : 'assets/images/check-button.svg';
+  }
+  checkAllFields();
+}
+
+async function handleContactSubmit(e) {
+  e.preventDefault();
+  const successMsg = document.getElementById('success-message');
+  if (successMsg) successMsg.style.display = 'none';
+
+  if (!validateAllBeforeSubmit()) return;
+
+  await sendContactMessage();
+}
+
+function validateAllBeforeSubmit() {
+  const nameValid = validateField(document.getElementById('contact-name'), 'error-name', 'icon-name', val => val.length > 0);
+  const emailValid = validateField(document.getElementById('contact-email'), 'error-email', 'icon-email', val => EMAIL_REGEX.test(val));
+  const msgValid = validateField(document.getElementById('contact-message'), 'error-message', 'icon-message', val => val.length > 0);
+  const privacyValid = checkPrivacyBeforeSubmit();
+
+  return nameValid && emailValid && msgValid && privacyValid;
+}
+
+function checkPrivacyBeforeSubmit() {
+  const privacyInput = document.getElementById('privacy');
+  if (!privacyInput || !privacyInput.checked) {
+    const errorEl = document.getElementById('error-privacy');
+    if (errorEl) errorEl.style.display = 'block';
+    return false;
+  }
+  return true;
+}
+
+async function sendContactMessage() {
+  const name = document.getElementById('contact-name').value.trim();
+  const email = document.getElementById('contact-email').value.trim();
+  const message = document.getElementById('contact-message').value.trim();
+  const successMsg = document.getElementById('success-message');
+
+  try {
+    const response = await fetch('contact_form_mail.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    });
+    handleResponse(response.ok, successMsg);
+  } catch (error) {
+    console.error('Error:', error);
+    showContactError(successMsg, 'Ein Fehler ist aufgetreten.', 'An error occurred.');
+  }
+}
+
+function handleResponse(isOk, successMsg) {
+  if (isOk) {
+    handleContactSuccess(successMsg);
+  } else {
+    showContactError(successMsg, 'Fehler beim Senden der Nachricht.', 'Error sending message.');
+  }
+}
+
+function handleContactSuccess(successMsg) {
+  if (successMsg) {
+    successMsg.textContent = currentLanguage === 'DE' ? 'Nachricht erfolgreich gesendet!' : 'Message sent successfully!';
+    successMsg.style.color = '#22c55e';
+    successMsg.style.display = 'block';
+  }
+  resetContactForm();
+}
+
+function resetContactForm() {
+  const form = document.getElementById('contact-form');
+  if (form) form.reset();
+  
+  ['contact-name', 'contact-email', 'contact-message'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.remove('success', 'error');
+  });
+  
+  document.querySelectorAll('.validation-icon').forEach(icon => icon.style.display = 'none');
+  const checkboxImg = document.getElementById('privacy-checkbox-img');
+  if (checkboxImg) checkboxImg.src = 'assets/images/check-button.svg';
+  checkAllFields();
+}
+
+function showContactError(successMsg, deText, enText) {
+  if (successMsg) {
+    successMsg.textContent = currentLanguage === 'DE' ? deText : enText;
+    successMsg.style.color = '#cb0101';
+    successMsg.style.display = 'block';
+  }
+}
 
 function updateTestimonial(index) {
   currentTestimonialIndex = index;
-  const currentTestimonials = testimonials[currentLanguage];
-  const testimonial = currentTestimonials[index];
+  const testimonial = testimonials[currentLanguage][index];
 
+  updateTestimonialContent(testimonial);
+  updateTestimonialDots(index);
+}
+
+function updateTestimonialContent(testimonial) {
   const testimonialText = document.querySelector(".testimonial-text");
   const testimonialAuthor = document.querySelector(".testimonial-author");
   const testimonialImage = document.querySelector(".testimonial-person");
@@ -226,7 +253,9 @@ function updateTestimonial(index) {
   if (testimonialText) testimonialText.textContent = testimonial.text;
   if (testimonialAuthor) testimonialAuthor.textContent = testimonial.author;
   if (testimonialImage) testimonialImage.src = testimonial.image;
+}
 
+function updateTestimonialDots(index) {
   const dots = document.querySelectorAll(".nav-dot");
   dots.forEach((dot, i) => {
     dot.classList.toggle("active", i === index);
@@ -234,26 +263,27 @@ function updateTestimonial(index) {
 }
 
 function initTestimonialNavigation() {
+  initTestimonialArrows();
+  initTestimonialDotClicks();
+}
+
+function initTestimonialArrows() {
   const prevBtn = document.querySelector(".testimonial-nav .nav-arrow:first-of-type");
   const nextBtn = document.querySelector(".testimonial-nav .nav-arrow:last-of-type");
+
+  if (prevBtn) prevBtn.addEventListener("click", () => changeTestimonial(-1));
+  if (nextBtn) nextBtn.addEventListener("click", () => changeTestimonial(1));
+}
+
+function changeTestimonial(direction) {
+  const currentTestimonials = testimonials[currentLanguage];
+  const length = currentTestimonials.length;
+  const newIndex = (currentTestimonialIndex + direction + length) % length;
+  updateTestimonial(newIndex);
+}
+
+function initTestimonialDotClicks() {
   const dots = document.querySelectorAll(".nav-dot");
-
-  if (prevBtn) {
-    prevBtn.addEventListener("click", () => {
-      const currentTestimonials = testimonials[currentLanguage];
-      const newIndex = (currentTestimonialIndex - 1 + currentTestimonials.length) % currentTestimonials.length;
-      updateTestimonial(newIndex);
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener("click", () => {
-      const currentTestimonials = testimonials[currentLanguage];
-      const newIndex = (currentTestimonialIndex + 1) % currentTestimonials.length;
-      updateTestimonial(newIndex);
-    });
-  }
-
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
       updateTestimonial(index);

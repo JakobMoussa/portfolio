@@ -361,6 +361,14 @@ h3 {
   .portfolio-reference {
     width: min(100%, 940px) !important;
   }
+
+
+}
+
+@media (min-width: 700px) and (max-width: 1299px) {
+  .txt-portfolio {
+    margin-top: 40px !important;
+  }
 }
 
 @media (min-width: 1000px) and (max-width: 1099px) {
@@ -443,6 +451,10 @@ h3 {
 
   .contact-headline-container h2 {
     font-size: 60px;
+  }
+
+  .txt-portfolio {
+    margin-top: 40px !important;
   }
 }
 
@@ -535,7 +547,7 @@ h3 {
   }
 
   .testimonial-nav {
-    margin-top: -25px !important;
+    margin-top: 0px !important;
   }
 
   .crm-shadow {
