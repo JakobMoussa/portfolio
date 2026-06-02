@@ -660,7 +660,7 @@ h3 {
   }
 
   .portfolio-section p {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 
   .reverse {
@@ -769,7 +769,7 @@ h3 {
   }
 
   .portfolio-section p {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 
   .reverse {
@@ -888,7 +888,7 @@ h3 {
   }
 
   .portfolio-section p {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 
   .reverse {
@@ -1073,7 +1073,7 @@ h3 {
   .testimonial-card {
     max-width: 350px;
     margin-top: 12px;
-    padding: 0px 20px 12px 20px;
+    padding: 0px 20px 12px 20px !important;
     min-height: 150px;
   }
 
@@ -1168,7 +1168,7 @@ h3 {
   }
 
   .testimonial-author {
-    font-size: 15px !important;
+    font-size: 16px !important;
   }
 
   .testimonial-footer {
@@ -1209,7 +1209,7 @@ h3 {
   .live-btn,
   .github-btn {
     max-width: 120px;
-    font-size: 14px !important;
+    font-size: 16px !important;
     padding: 8px 0px !important;
   }
 

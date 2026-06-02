@@ -298,6 +298,18 @@ function switchLanguage(lang) {
 function updateStaticTranslations() {
   updateTranslationElements();
   updateLanguageButtons();
+  adjustLegalHeadlineFontSize();
+}
+
+function adjustLegalHeadlineFontSize() {
+  const headline = document.querySelector('.legal-headline[data-translate="datenschutzTitle"]');
+  if (headline) {
+    if (currentLanguage === 'DE') {
+      headline.style.fontSize = '25px';
+    } else {
+      headline.style.fontSize = '';
+    }
+  }
 }
 
 function updateTranslationElements() {
@@ -344,6 +356,9 @@ function toggleMenu() {
 }
 
 function closeMenu() {
+  const rightNav = document.querySelector(".right-nav");
+  if (rightNav) rightNav.style.animation = "";
+
   document.body.classList.add("menu-closing");
   setTimeout(() => {
     document.body.classList.remove("menu-open");

@@ -138,6 +138,7 @@ function renderAboutTemplate() {
     </section>
   `;
 }
+
 function renderSkillsTemplate() {
   const t = translations[currentLanguage];
   return `
@@ -339,7 +340,7 @@ function renderContactTemplate() {
             <input type="checkbox" id="privacy" style="display:none;">
             <label for="privacy" style="display:flex; align-items:center; gap:10px; cursor:pointer;">
               <img src="assets/images/check-button.svg" class="custom-checkbox" id="privacy-checkbox-img" alt="checkbox" style="width:24px; height:24px;">
-              <span>${t.privacyText}<a href="#">${t.privacyLink}</a>${t.privacyTextEnd}</span>
+              <span>${t.privacyText}<a href="datenschutz.html">${t.privacyLink}</a>${t.privacyTextEnd}</span>
             </label>
           </div>
           <span class="error-msg" id="error-privacy" style="display:none; color:#cb0101; font-size:12px; margin-top:-10px;">${t.errorPrivacy}</span>
@@ -366,9 +367,9 @@ function renderFooterTemplate() {
       <div class="footer-content">
         
         <div class="footer-left">
-          <div class="footer-logo">
-            <span>Jakob</span>
-          </div>
+                <div class="footer-logo">
+                    <span><img class="jakob-image" src="assets/images/Jakob.svg" alt="jakob"></span>
+                </div>
           <p class="footer-legal">
             <a class="impressum" href="impressum.html">${t.legalNoticeLink}</a> | <a class="datenschutz" href="datenschutz.html">${t.privacyPolicyLink}</a>
           </p>

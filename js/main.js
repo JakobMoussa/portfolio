@@ -35,7 +35,6 @@ function renderAll() {
   renderSections();
   initInteractions();
   restoreMenuState(wasMenuOpen);
-
   window.scrollTo(0, scrollY);
 }
 
@@ -66,10 +65,10 @@ document.addEventListener('languageChanged', renderAll);
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-  
+
   bindContactInputEvents();
   checkAllFields();
-  
+
   form.addEventListener('submit', handleContactSubmit);
 }
 
@@ -86,7 +85,7 @@ function validateField(inputElement, errorId, iconId, validatorFn) {
 function updateValidationUI(input, errorEl, iconEl, isValid) {
   input.classList.remove(isValid ? 'error' : 'success');
   input.classList.add(isValid ? 'success' : 'error');
-  
+
   if (errorEl) errorEl.style.display = isValid ? 'none' : 'block';
   if (iconEl) {
     iconEl.src = isValid ? 'assets/images/green-frame.svg' : 'assets/images/red-frame.svg';
@@ -99,7 +98,7 @@ function checkAllFields() {
   const emailInput = document.getElementById('contact-email');
   const messageInput = document.getElementById('contact-message');
   const privacyInput = document.getElementById('privacy');
-  
+
   const isNameValid = nameInput && nameInput.value.trim().length > 0;
   const isEmailValid = emailInput && EMAIL_REGEX.test(emailInput.value.trim());
   const isMessageValid = messageInput && messageInput.value.trim().length > 0;
@@ -123,7 +122,7 @@ function bindContactInputEvents() {
   bindInput('contact-name', 'error-name', 'icon-name', val => val.length > 0);
   bindInput('contact-email', 'error-email', 'icon-email', val => EMAIL_REGEX.test(val));
   bindInput('contact-message', 'error-message', 'icon-message', val => val.length > 0);
-  
+
   const privacyInput = document.getElementById('privacy');
   if (privacyInput) privacyInput.addEventListener('change', () => handlePrivacyChange(privacyInput));
 }
@@ -141,7 +140,7 @@ function bindInput(inputId, errorId, iconId, validatorFn) {
 function handlePrivacyChange(privacyInput) {
   const errorEl = document.getElementById('error-privacy');
   const checkboxImg = document.getElementById('privacy-checkbox-img');
-  
+
   if (errorEl) errorEl.style.display = privacyInput.checked ? 'none' : 'block';
   if (checkboxImg) {
     checkboxImg.src = privacyInput.checked ? 'assets/images/check-button-checked.svg' : 'assets/images/check-button.svg';
@@ -217,12 +216,12 @@ function handleContactSuccess(successMsg) {
 function resetContactForm() {
   const form = document.getElementById('contact-form');
   if (form) form.reset();
-  
+
   ['contact-name', 'contact-email', 'contact-message'].forEach(id => {
     const el = document.getElementById(id);
     if (el) el.classList.remove('success', 'error');
   });
-  
+
   document.querySelectorAll('.validation-icon').forEach(icon => icon.style.display = 'none');
   const checkboxImg = document.getElementById('privacy-checkbox-img');
   if (checkboxImg) checkboxImg.src = 'assets/images/check-button.svg';

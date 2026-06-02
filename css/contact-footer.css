@@ -153,7 +153,7 @@ input {
 .checkbox {
   display: flex;
   gap: 10px;
-  font-size: 14px;
+  font-size: 16px;
   color: #cbd5e1;
 }
 
@@ -231,7 +231,7 @@ input {
 }
 
 .footer-legal {
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   text-align: justify;
   color: #cbd5e1;
@@ -438,6 +438,57 @@ input {
 
 }
 
+@media (min-width: 530px) and (max-width: 630px) {
+  .jakob-image {
+    width: 100px;
+    height: 50px;
+  }
+
+  .footer-left {
+    gap: 0;
+  }
+
+  .footer-copyright {
+    font-size: 16px !important;
+  }
+
+  .footer-social {
+    gap: 3px !important;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 529px) {
+  .jakob-image {
+    width: 100px;
+    height: 50px;
+  }
+
+  .footer-left {
+    gap: 0;
+  }
+
+  .footer-copyright {
+    font-size: 16px !important;
+  }
+
+  .footer-social {
+    gap: 1px;
+  }
+
+  .footer-social img {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .footer-social {
+    gap: 2px !important;
+  }
+
+  .footer-social a {
+    justify-content: end;
+  }
+}
+
 @media (min-width: 500px) and (max-width: 599px) {
   .contact-headline {
     font-size: 28px;
@@ -482,11 +533,7 @@ input {
   }
 
   .footer {
-    padding: 30px 20px 35px 22px !important;
-  }
-
-  .footer-social {
-    gap: 4px !important;
+    padding: 30px 10px 35px 10px !important;
   }
 
   .footer-content {
@@ -494,7 +541,7 @@ input {
   }
 
   .footer-copyright {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 
   .footer-legal {
@@ -503,6 +550,10 @@ input {
 
   .footer-logo span {
     font-size: 32px !important;
+  }
+
+  .footer-social {
+    gap: 1px;
   }
 
 }
@@ -551,7 +602,7 @@ input {
   }
 
   .footer-copyright {
-    font-size: 14px !important;
+    font-size: 16px !important;
   }
 }
 
@@ -669,6 +720,11 @@ input {
 
   .contact-right form {
     max-width: 260px !important;
+  }
+
+  .jakob-image {
+    width: 100px !important;
+    height: 50px !important;
   }
 }
 

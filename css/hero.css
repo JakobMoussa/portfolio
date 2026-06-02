@@ -1,10 +1,12 @@
+#hero-section {
+  min-height: 100vh;
+}
+
 .hero {
   position: relative;
-  /* min-height: 100vh;
-  min-height: 100dvh; */
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   box-sizing: border-box;
 }
 
@@ -574,7 +576,7 @@
 
   .language-switch button {
     height: 30px;
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .hero-main-text h1 {
@@ -1041,9 +1043,7 @@
   }
 }
 
-@media (max-width: 330px) {
-
-}
+@media (max-width: 330px) {}
 
 @media (max-width: 320px) {
 
