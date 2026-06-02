@@ -210,12 +210,24 @@
   position: absolute;
   font-size: clamp(16px, 2vw, 23px);
   top: clamp(500px, 56vw, 727px);
-  transform: rotate(90deg);
+  transform: translateY(0) rotate(90deg);
   right: clamp(40px, 6%, 100px);
   z-index: 7;
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  animation: scrollFall 1.5s ease-out forwards;
+}
+
+@keyframes scrollFall {
+  0% {
+    transform: translateY(-50px) rotate(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(90deg);
+    opacity: 1;
+  }
 }
 
 .purple-shadow-2 {

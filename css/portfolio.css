@@ -85,6 +85,23 @@ p {
   justify-content: center;
   gap: 60px;
   position: relative;
+  opacity: 0;
+}
+
+.portfolio-project.animate {
+  animation: slideFromLeft 1.2s ease-out forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .portfolio-project .project-media {

@@ -51,6 +51,19 @@ function initInteractions() {
   initMobileMenu();
   initContactForm();
   updateTestimonial(currentTestimonialIndex);
+  initScrollObserver();
+}
+
+function initScrollObserver() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  });
+
+  document.querySelectorAll('.about-topbar, .portfolio-project').forEach(el => observer.observe(el));
 }
 
 function restoreMenuState(wasMenuOpen) {
