@@ -10,7 +10,7 @@
 html {
   background: #131c2f;
   scroll-behavior: smooth;
-  scroll-padding-top: 200px;
+  scroll-padding-top: 170px;
   overflow-x: hidden;
 }
 
@@ -21,6 +21,11 @@ body {
   margin: 0 auto;
   overflow-x: hidden;
   position: relative;
+}
+
+html.menu-open,
+body.menu-open {
+  overflow: hidden;
 }
 
 #hero-section,
@@ -41,4 +46,10 @@ body {
 .jakob-image {
   width: 150px;
   height: 60px;
+}
+
+@media(max-width: 499px) {
+  html {
+    scroll-padding-top: 97px !important;
+  }
 }

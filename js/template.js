@@ -147,25 +147,64 @@ function renderSkillsTemplate() {
       
       <div class="left-container">
         <div class="skills-box">
-            <img class="icon" src="assets/images/icons/icon-1.svg">
-            <img class="icon" src="assets/images/icons/icon-2.svg">
-            <img class="icon" src="assets/images/icons/icon-3.svg">
-            <img class="icon" src="assets/images/icons/icon-4.svg">
-            <img class="icon" src="assets/images/icons/icon-5.svg">
-            <img class="icon" src="assets/images/icons/icon-6.svg">
-            <img class="icon" src="assets/images/icons/icon-7.svg">
-            <img class="icon" src="assets/images/icons/icon-8.svg">
-            <img class="icon" src="assets/images/icons/icon-9.svg">
-            <img class="icon" src="assets/images/icons/icon-10.svg">
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/html.svg">
+              <span>HTML</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/css.svg">
+              <span>CSS</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/js.svg">
+              <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/typescript.svg">
+              <span>TypeScript</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/Angular.svg">
+              <span>Angular</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/subabase.svg">
+              <span>Supabase</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/git.svg">
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/api.svg">
+              <span>API</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/scrum.svg">
+              <span>Scrum</span>
+            </div>
+            <div class="skill-item">
+              <img class="icon" src="assets/images/icons/material-design.svg">
+              <span>Material Design</span>
+            </div>
             <div class="special-icon">
             <div class="learning-card">
-              <img class="main-icon" src="assets/images/icons/icon-11.svg" alt="Learning Icon">
+              <div class="learning">
+              <img class="main-icon" src="assets/images/icons/learning.svg">
+              <span class="txt-learning">Continually learning</span>
+            </div>
               <div class="skill-bubble">
                 <p class="bubble-txt">${t.skillsSpecial}</p>
 
                 <div class="bubble-icons">
-                  <img src="assets/images/icons/react.svg" alt="React">
-                  <img src="assets/images/icons/vue.svg" alt="Vue">
+                <div class="learning-icons">
+                  <img src="assets/images/icons/React.svg" alt="React">
+                  <span>React</span>
+                </div>
+                <div class="learning-icons">
+                  <img src="assets/images/icons/Vue.svg" alt="Vue">
+                  <span>Vue</span>
+                </div>
                 </div>
               </div>
             </div>
@@ -216,8 +255,8 @@ function renderPortfolioTemplate() {
                 <h3>Angular | TypeScript | HTML | CSS | Firebase</h3>
                 <p class="p-txt">${t.joinDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/6-join/index.html" target="_blank" rel="noopener noreferrer" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="https://github.com/JakobMoussa/Join-Project.git" target="_blank" rel="noopener noreferrer" class="project-btn">Github</a></button>
+                  <a href="https://jakob-moussa.developerakademie.net/6-join/index.html" target="_blank" rel="noopener noreferrer" class="live-btn project-btn">${t.liveTest}</a>
+                  <a href="https://github.com/JakobMoussa/Join-Project.git" target="_blank" rel="noopener noreferrer" class="github-btn project-btn">Github</a>
                 </div>
               </div>
             </article>
@@ -228,8 +267,8 @@ function renderPortfolioTemplate() {
                 <h3>JavaScript | HTML | CSS</h3>
                 <p class="p-txt">${t.sharkieDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/Sharkie/index.html" target="_blank" rel="noopener noreferrer" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="https://github.com/JakobMoussa/sharkie" target="_blank" rel="noopener noreferrer" class="project-btn">Github</a></button>
+                  <a href="https://jakob-moussa.developerakademie.net/Sharkie/index.html" target="_blank" rel="noopener noreferrer" class="live-btn project-btn">${t.liveTest}</a>
+                  <a href="https://github.com/JakobMoussa/sharkie" target="_blank" rel="noopener noreferrer" class="github-btn project-btn">Github</a>
                 </div>
               </div>
               <div class="project-media">
@@ -243,8 +282,8 @@ function renderPortfolioTemplate() {
                 <h3>JavaScript | HTML | CSS | Api</h3>
                 <p class="p-txt">${t.pokeDesc}</p>
                 <div class="project-actions">
-                  <button class="live-btn"><a href="https://jakob-moussa.developerakademie.net/Pokomon/index.html" target="_blank" rel="noopener noreferrer" class="project-btn">${t.liveTest}</a></button>
-                  <button class="github-btn"><a href="https://github.com/JakobMoussa/pokedex" target="_blank" rel="noopener noreferrer" class="project-btn">Github</a></button>
+                  <a href="https://jakob-moussa.developerakademie.net/Pokomon/index.html" target="_blank" rel="noopener noreferrer" class="live-btn project-btn">${t.liveTest}</a>
+                  <a href="https://github.com/JakobMoussa/pokedex" target="_blank" rel="noopener noreferrer" class="github-btn project-btn">Github</a>
                 </div>
               </div>
               <div class="project-media">
@@ -354,7 +393,7 @@ function renderContactTemplate() {
 
   </div>
   <img class="contact-purple-shadow" src="assets/images/Purple shadow 4.png" alt="purple shadow">
-  <a href="#hero-section" class="go-up-arrow"><img src="assets/images/go-up-arrow.png" alt="Go up" style="width: 100%; height: auto;"></a>
+  <a href="#hero-section" class="go-up-arrow"><img src="assets/images/go-up-arrow.svg" alt="Go up" style="width: 100%; height: auto;"></a>
 
 </section>
   `

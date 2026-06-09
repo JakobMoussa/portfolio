@@ -66,6 +66,8 @@ function initScrollObserver() {
   document.querySelectorAll('.about-topbar, .portfolio-project').forEach(el => observer.observe(el));
 }
 
+
+
 function restoreMenuState(wasMenuOpen) {
   if (wasMenuOpen) {
     const rightNav = document.querySelector(".right-nav");

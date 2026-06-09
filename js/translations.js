@@ -19,7 +19,7 @@ const translations = {
 
     skillsSpecial: "I have a special interest in learning",
     skillsTitle: "My Skills",
-    skillsTxt1: "As a frontend developer, I have already worked with<br>modern web technologies and frameworks.",
+    skillsTxt1: "As a frontend developer, I have <br>already worked with<br>modern web technologies and frameworks.",
     skillsTxt2_1: "Looking for ",
     skillsTxt2_2: "another skill?",
     skillsTxt3: "I am passionate about constantly expanding my knowledge<br>and using modern tools in my projects.",
@@ -352,6 +352,7 @@ function toggleMenu() {
     closeMenu();
   } else {
     document.body.classList.add("menu-open");
+    document.documentElement.classList.add("menu-open");
   }
 }
 
@@ -360,9 +361,12 @@ function closeMenu() {
   if (rightNav) rightNav.style.animation = "";
 
   document.body.classList.add("menu-closing");
+  document.documentElement.classList.add("menu-closing");
   setTimeout(() => {
     document.body.classList.remove("menu-open");
     document.body.classList.remove("menu-closing");
+    document.documentElement.classList.remove("menu-open");
+    document.documentElement.classList.remove("menu-closing");
   }, 300);
 }
 

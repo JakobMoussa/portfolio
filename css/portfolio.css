@@ -150,7 +150,7 @@ p {
 }
 
 h2 {
-  color: #8a3ffc;
+  color: white;
   font-size: 32px;
 }
 
@@ -737,7 +737,7 @@ h3 {
 
 @media (min-width: 500px) and (max-width: 599px) {
   .portfolio-headline h1 {
-    font-size: 28px;
+    font-size: 40px;
   }
 
   .portfolio-project {
@@ -982,7 +982,7 @@ h3 {
   }
 
   .portfolio-headline h1 {
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .headline-line-right {

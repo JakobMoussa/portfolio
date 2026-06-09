@@ -491,7 +491,7 @@ input {
 
 @media (min-width: 500px) and (max-width: 599px) {
   .contact-headline {
-    font-size: 28px;
+    font-size: 40px;
   }
 
   .contact-headline-container .line {
@@ -574,7 +574,7 @@ input {
 
 @media (max-width: 499px) {
   .contact-headline {
-    font-size: 28px;
+    font-size: 40px;
   }
 
   .contact-headline-container .line {
@@ -615,7 +615,7 @@ input {
   }
 
   .contact-headline {
-    font-size: 45px;
+    font-size: 40px;
   }
 
   .contact-headline-container .line {

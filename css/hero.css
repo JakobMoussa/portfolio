@@ -29,9 +29,7 @@
   padding: clamp(25px, 3%, 40px) clamp(45px, 7%, 80px) 0 clamp(45px, 7%, 80px);
 }
 
-#about-section {
-  scroll-padding-bottom: 200px;
-}
+
 
 .logo img {
   width: 100px;
