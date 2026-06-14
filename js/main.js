@@ -28,6 +28,16 @@ function renderFooter() {
 
 document.addEventListener("DOMContentLoaded", renderAll);
 
+window.addEventListener('resize', updateHeaderHeight);
+
+function updateHeaderHeight() {
+  const header = document.querySelector('.hero-header');
+  if (header) {
+    const height = header.offsetHeight;
+    document.documentElement.style.setProperty('--header-height', `${height}px`);
+  }
+}
+
 function renderAll() {
   const scrollY = window.scrollY;
   const wasMenuOpen = document.body.classList.contains("menu-open");
@@ -35,6 +45,10 @@ function renderAll() {
   renderSections();
   initInteractions();
   restoreMenuState(wasMenuOpen);
+  
+  // Berechne die genaue Höhe des Headers für perfektes Scrollen
+  updateHeaderHeight();
+  
   window.scrollTo(0, scrollY);
 }
 

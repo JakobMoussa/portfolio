@@ -29,8 +29,6 @@
   padding: clamp(25px, 3%, 40px) clamp(45px, 7%, 80px) 0 clamp(45px, 7%, 80px);
 }
 
-
-
 .logo img {
   width: 100px;
   height: 100px;
@@ -367,7 +365,7 @@
   }
 
   .profile-img {
-    top: 20px !important;
+    top: 90px !important;
   }
 }
 
@@ -420,7 +418,7 @@
   }
 
   .profile-img {
-    top: 50px !important;
+    top: 80px !important;
   }
 
   .vector {
@@ -1265,82 +1263,164 @@
   }
 }
 
-@media (min-width: 500px) and (max-width: 599px) {
+
+@media (max-height: 650px) and (orientation: landscape) {
+
+  .hero-header {
+    padding: 0 20px 0 20px !important;
+  }
+
+  .logo img {
+    height: 85px !important;
+  }
 
   #hero-section,
   .hero {
-    height: 62vh;
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  .hero-content {
+    margin-top: 76px !important;
+    align-items: center;
+  }
+
+  .hero-image {
+    width: clamp(200px, 30vw, 300px) !important;
+    height: clamp(200px, 30vw, 300px) !important;
+  }
+
+  .profile-img {
+    width: clamp(180px, 25vw, 247px) !important;
+    height: clamp(100px, 28vw, 249px) !important;
+    top: 20px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .shadow-green,
+  .shadow-purple {
+    width: clamp(150px, 20vw, 200px) !important;
+    height: clamp(150px, 20vw, 200px) !important;
+    top: 10px !important;
+  }
+
+  .vector {
+    top: 30px !important;
+    height: 400px !important;
+    z-index: 2;
+  }
+
+  .scroll-txt {
+    bottom: 40px !important;
+    right: 20px !important;
+  }
+
+  .purple-shadow-2 {
+    bottom: -200px !important;
+  }
+
+  .about-topbar {
+    position: relative !important;
+    bottom: auto !important;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+  }
+
+  .hero-text {
+    transform: translateX(0) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    margin-left: clamp(10px, 3vw, 30px) !important;
+  }
+
+  .hero-main-text h1 {
+    font-size: clamp(32px, 5vw, 50px) !important;
+  }
+
+  .hero-main-text h2 {
+    font-size: clamp(20px, 3vw, 30px) !important;
+  }
+
+  .hero-side-text span {
+    font-size: clamp(26px, 4vw, 35px) !important;
+  }
+
+  html {
+    scroll-padding-top: 85px !important;
   }
 }
 
-@media (min-width: 600px) and (max-width: 699px) {
+@media (max-width: 499px) and (max-height: 650px) {
 
   #hero-section,
   .hero {
-    height: 65vh;
+    height: auto !important;
+    min-height: 100vh;
+  }
+
+  .hero {
+    padding-bottom: 40px;
   }
 }
 
-@media (min-width: 700px) and (max-width: 799px) {
+@media (max-width: 558px) and (max-height: 571px) {
 
   #hero-section,
   .hero {
-    height: 72vh;
+    height: 69vh;
   }
 }
 
-@media (min-width: 800px) and (max-width: 899px) {
+@media (max-width: 425px) and (max-height: 420px) {
 
-  #hero-section,
-  .hero {
-    height: 76vh;
+  .profile-img {
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+  .shadow-green,
+  .shadow-purple {
+    width: 260px !important;
+    height: 250px !important;
+    top: 10px !important;
   }
 }
 
-@media (min-width: 900px) and (max-width: 999px) {
+@media (max-width: 332px) and (max-height: 411px) {
 
-  #hero-section,
-  .hero {
-    height: 85vh;
+  .profile-img {
+    height: 200px !important;
+    width: 200px !important;
+  }
+
+  .shadow-green,
+  .shadow-purple {
+    width: 200px !important;
+    height: 250px !important;
+    top: 10px !important;
   }
 }
 
-@media (min-width: 1000px) and (max-width: 1099px) {
+@media (width: 768px) and (height: 1024px),
+(width: 820px) and (height: 1180px),
+(width: 1024px) and (height: 1366px),
+(width: 853px) and (height: 1280px),
+(min-height: 750px) and (min-width: 500px) and (max-width: 800px) {
 
-  #hero-section,
-  .hero {
-    height: 82vh;
+  .hero-content {
+    margin-top: 25vh;
   }
 }
 
-@media (min-width: 1100px) and (max-width: 1199px) {
-
-  #hero-section,
-  .hero {
-    height: 86vh;
+@media (width: 768px) and (height: 1024px) {
+  .profile-img {
+    width: 320px;
+    height: 370px;
+    top: -12px !important;
   }
-}
 
-@media (min-width: 1200px) and (max-width: 1299px) {
-
-  #hero-section,
-  .hero {
-    height: 95vh;
-  }
-}
-
-@media (min-width: 1300px) and (max-width: 1399px) {
-
-  #hero-section,
-  .hero {
-    height: 100vh;
-  }
-}
-
-@media (min-width: 1400px) and (max-width: 1499px) {
-
-  #hero-section,
-  .hero {
-    height: 100vh;
+  .hero-text {
+    transform: translateX(clamp(-100px, -8vw, -50px));
   }
 }

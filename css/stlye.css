@@ -10,7 +10,7 @@
 html {
   background: #131c2f;
   scroll-behavior: smooth;
-  scroll-padding-top: 170px;
+  scroll-padding-top: var(--header-height, 140px) !important;
   overflow-x: hidden;
 }
 
@@ -48,8 +48,34 @@ body.menu-open {
   height: 60px;
 }
 
+#about-section,
+#skills-section,
+#contact-section {
+  scroll-margin-top: 0px;
+}
+
+#portfolio-section {
+  scroll-margin-top: -40px;
+}
+
+@media(min-width: 800px) and (max-width: 1024px) {
+  #portfolio-section {
+    scroll-margin-top: -30px;
+  }
+}
+
+@media(min-width: 500px) and (max-width: 799px) {
+  #portfolio-section {
+    scroll-margin-top: -50px;
+  }
+}
+
 @media(max-width: 499px) {
-  html {
-    scroll-padding-top: 97px !important;
+  #portfolio-section {
+    scroll-margin-top: -60px;
+  }
+
+  #skills-section {
+    scroll-margin-top: 10px !important;
   }
 }
